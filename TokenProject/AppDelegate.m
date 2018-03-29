@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "TKMarketsMainController.h"
+#import "TKNewsMainController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self loadTabController];
     return YES;
 }
 
@@ -45,6 +48,24 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+/**
+ * 加载主tabController
+ */
+- (void)loadTabController
+{
+    TKMarketsMainController *market = [TKMarketsMainController new];
+    UINavigationController *marketNav = [[UINavigationController alloc] initWithRootViewController:market];
+    
+    TKNewsMainController *news = [TKNewsMainController new];
+    UINavigationController *newsNav = [[UINavigationController alloc] initWithRootViewController:news];
+    
+    UITabBarController *tab = [UITabBarController new];
+    tab.viewControllers = @[marketNav,newsNav];
+    
+    self.window.rootViewController = tab;
+    [self.window makeKeyAndVisible];
 }
 
 
