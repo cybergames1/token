@@ -32,4 +32,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:a]
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
 #endif
 
+#ifndef Current_TimeInterval
+#define Current_TimeInterval (UInt64)[[NSDate date] timeIntervalSince1970]
+#endif
+
 #endif /* BaseDefines_h */

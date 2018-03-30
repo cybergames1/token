@@ -21,7 +21,7 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self)
     {
-        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.selectionStyle = UITableViewCellSelectionStyleGray;
         [self setupView];
     }
     return self;
@@ -46,9 +46,13 @@
     imageView_.contentMode = UIViewContentModeScaleAspectFill;
     self.picImageView = imageView_;
     
+    UIView *line_ = [[UIView alloc] initWithFrame:CGRectMake(15, 101-0.5, SCREEN_WIDTH-30, 0.5)];
+    line_.backgroundColor = UIColorFromRGB(0xe1e1e1);
+    
     [self addSubview:self.titleLabel];
     [self addSubview:self.timeAuthorLabel];
     [self addSubview:self.picImageView];
+    [self addSubview:line_];
 }
 
 @end

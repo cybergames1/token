@@ -9,6 +9,7 @@
 #import "TKNewsMainController.h"
 #import "TKRequest.h"
 #import "TKNewsModel.h"
+#import "TKNewsDetailController.h"
 
 @interface TKNewsMainController ()
 
@@ -31,14 +32,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    TKNewsSingleModel *item = [self itemDataForIndexPath:indexPath];
+    TKNewsDetailController *controller = [[TKNewsDetailController alloc] init];
+    controller.urlString = item.extra.topic_url;
+    [self.navigationController pushViewController:controller animated:YES];
 }
-*/
 
 @end

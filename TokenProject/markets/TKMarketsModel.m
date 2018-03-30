@@ -11,3 +11,17 @@
 @implementation TKMarketsModel
 
 @end
+
+@implementation TKMarketsDataModel
+
+@end
+
+@implementation TKMarketsTopNavModel
+
++ (JSONKeyMapper *)keyMapper
+{
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{@"marketId" : @"id"}];
+}
+
+@end
+

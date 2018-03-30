@@ -39,6 +39,7 @@ try{} @finally{} __typeof__(x) x = __block_##x##__; \
 #endif
 
 #import "BaseDefines.h"
+#import "TKBaseAPI.h"
 
 
 // Include any system framework and library headers here that should be included in all compilation units.

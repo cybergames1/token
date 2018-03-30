@@ -37,7 +37,6 @@
 
 - (NSArray *)parserData:(id)data
 {
-    NSLog(@"data:%@",data);
     if (!data || ![data isKindOfClass:[TKNewsModel class]]) return [NSArray array];
     
     NSArray *newsList = [(TKNewsModel *)data list];
