@@ -8,37 +8,48 @@
 
 #import "TKRequest.h"
 #import "AFNetworking.h"
+#import "TKModel.h"
 
 @implementation TKRequest
 
 - (NSURLSessionDataTask *)GET:(NSString *)URLString
                    parameters:(id)parameters
-                     progress:(void (^)(NSProgress *downloadProgress))downloadProgress
-                      success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                      failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
-    self.success = success;
-    self.failure = failure;
-    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     
-    return [manager GET:URLString parameters:parameters progress:downloadProgress success:success failure:failure];
+    @autoreleasepool{} __weak __typeof__(self) __weak_self__ = self;
+    return [manager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        @try{} @finally{} __typeof__(self) self = __weak_self__;
+        if (self.progress) self.progress(downloadProgress);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        @try{} @finally{} __typeof__(self) self = __weak_self__;
+        TKModel *data = (self.responseDataClassName && [responseObject isKindOfClass:[NSDictionary class]]) ? [[NSClassFromString(self.responseDataClassName) alloc] initWithDictionary:responseObject error:nil] : responseObject;
+        if (self.success) self.success(task, data);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        @try{} @finally{} __typeof__(self) self = __weak_self__;
+        if (self.failure) self.failure(task, error);
+    }];
 }
 
 - (NSURLSessionDataTask *)POST:(NSString *)URLString
                     parameters:(id)parameters
-                      progress:(void (^)(NSProgress *uploadProgress))uploadProgress
-                       success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure
 {
-    self.success = success;
-    self.failure = failure;
-    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     
-    return [manager POST:URLString parameters:parameters progress:uploadProgress success:success failure:failure];
+    @autoreleasepool{} __weak __typeof__(self) __weak_self__ = self;
+    return [manager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        @try{} @finally{} __typeof__(self) self = __weak_self__;
+        if (self.progress) self.progress(uploadProgress);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        @try{} @finally{} __typeof__(self) self = __weak_self__;
+        TKModel *data = (!self.responseDataClassName && [responseObject isKindOfClass:[NSDictionary class]]) ? [[NSClassFromString(self.responseDataClassName) alloc] initWithDictionary:responseObject error:nil] : responseObject;
+        if (self.success) self.success(task, data);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        @try{} @finally{} __typeof__(self) self = __weak_self__;
+        if (self.failure) self.failure(task, error);
+    }];
 }
 
 @end

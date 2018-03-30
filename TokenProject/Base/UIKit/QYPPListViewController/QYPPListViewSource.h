@@ -65,6 +65,9 @@
 /** 数据请求 **/
 @property (nonatomic, strong) TKRequest * request;
 
+/** 数据请求回来要转换成的数据模型 **/
+@property (nonatomic, strong) TKModel * responseDataModel;
+
 
 @end
 
@@ -81,7 +84,7 @@
  * 注册网络请求 NetRequest 的类名
  * @param requestClassName tableview主网络请求类的 className
  */
-- (void)registerNetRequest:(NSString *)requestClassName;
+- (void)registerNetRequest:(NSString *)requestClassName responseDataModel:(NSString *)modelClassName;
 
 #pragma mark - 以下四个方法需子类实现
 

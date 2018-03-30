@@ -9,24 +9,22 @@
 #import <Foundation/Foundation.h>
 
 //定义返回请求数据的block类型
+typedef void (^ProgressBlock)(NSProgress *progress);
 typedef void (^SuccessBlock)(NSURLSessionDataTask *task, id responseObject);
 typedef void (^FailureBlock)(NSURLSessionDataTask *task, NSError *error);
 
 @interface TKRequest : NSObject
 
+@property (nonatomic, copy) ProgressBlock progress;
 @property (nonatomic, copy) SuccessBlock success;
 @property (nonatomic, copy) FailureBlock failure;
 
+@property (nonatomic, strong) NSString * responseDataClassName;
+
 - (NSURLSessionDataTask *)GET:(NSString *)URLString
-                   parameters:(id)parameters
-                     progress:(void (^)(NSProgress *downloadProgress))downloadProgress
-                      success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                      failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
+                   parameters:(id)parameters;
 
 - (NSURLSessionDataTask *)POST:(NSString *)URLString
-                    parameters:(id)parameters
-                      progress:(void (^)(NSProgress *uploadProgress))uploadProgress
-                       success:(void (^)(NSURLSessionDataTask *task, id responseObject))success
-                       failure:(void (^)(NSURLSessionDataTask *task, NSError *error))failure;
+                    parameters:(id)parameters;
 
 @end

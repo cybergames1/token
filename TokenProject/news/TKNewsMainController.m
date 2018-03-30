@@ -22,20 +22,8 @@
     self.title = @"资讯";
     self.view.backgroundColor = [UIColor whiteColor];
     
-    NSDictionary *parameters = @{@"catelogue_key" : @"www",
-                                 @"limit" : @20,
-                                 @"flag" : @"up",
-                                 @"information_id" : @"18023"
-                                 };
-    TKRequest *request = [TKRequest new];
-    [request GET:@"http://api.jinse.com/v3/information/list" parameters:parameters progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        if (![responseObject isKindOfClass:[NSDictionary class]]) return ;
-        
-        TKNewsModel *newsModel = [[TKNewsModel alloc] initWithDictionary:responseObject error:nil];
-        NSLog(@"model:%@",newsModel);
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        NSLog(@"error:%@",error);
-    }];
+    [self registerCell:@"TKNewsCell" tableViewSource:@"TKNewsSource" reuseIdentifier:@"TKNewsCell"];
+    [self startRefresh];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -125,13 +125,14 @@
     return count;
 }
 
-- (void)registerNetRequest:(NSString *)requestClassName
+- (void)registerNetRequest:(NSString *)requestClassName responseDataModel:(NSString *)modelClassName
 {
     if (!requestClassName || [requestClassName length] <= 0) return;
     
     
     @weakify(self);
     self.request = [[NSClassFromString(requestClassName) alloc] init];
+    self.request.responseDataClassName = modelClassName;
     
     self.request.success = ^(NSURLSessionDataTask *task, id responseObject) {
         @strongify(self);
@@ -154,6 +155,12 @@
             [self.delegate listViewSourceDidFailure:self];
         }
     };
+}
+
+- (void)registerDataModel:(NSString *)modelClassName
+{
+    if (!modelClassName || [modelClassName length] <= 0) return;
+    self.responseDataModel = [[NSClassFromString(modelClassName) alloc] init];
 }
 
 - (void)freshDataSource

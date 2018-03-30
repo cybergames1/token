@@ -29,6 +29,7 @@
 		34B88CA1206D35CD007DE454 /* QYPPTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88C80206D35CD007DE454 /* QYPPTableView.m */; };
 		34B88CA2206D35CD007DE454 /* QYPPTableViewSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88C82206D35CD007DE454 /* QYPPTableViewSource.m */; };
 		34B88CEB206DE472007DE454 /* TKNewsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88CEA206DE472007DE454 /* TKNewsSource.m */; };
+		34B88CEE206E320C007DE454 /* TKNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88CED206E320C007DE454 /* TKNewsCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,9 @@
 		34B88CE6206D44F6007DE454 /* TokenProjectPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TokenProjectPrefixHeader.pch; sourceTree = "<group>"; };
 		34B88CE9206DE472007DE454 /* TKNewsSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKNewsSource.h; sourceTree = "<group>"; };
 		34B88CEA206DE472007DE454 /* TKNewsSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKNewsSource.m; sourceTree = "<group>"; };
+		34B88CEC206E320C007DE454 /* TKNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKNewsCell.h; sourceTree = "<group>"; };
+		34B88CED206E320C007DE454 /* TKNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKNewsCell.m; sourceTree = "<group>"; };
+		34B88CEF206E3515007DE454 /* BaseDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseDefines.h; sourceTree = "<group>"; };
 		35A049B444AF179B09290EA7 /* libPods-TokenProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TokenProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F4F63B956D98349DCB682BE /* Pods-TokenProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokenProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TokenProject/Pods-TokenProject.debug.xcconfig"; sourceTree = "<group>"; };
 		FF23640557B8536ED6196698 /* Pods-TokenProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TokenProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-TokenProject/Pods-TokenProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +196,8 @@
 				34B88C21206CF556007DE454 /* TKNewsModel.m */,
 				34B88CE9206DE472007DE454 /* TKNewsSource.h */,
 				34B88CEA206DE472007DE454 /* TKNewsSource.m */,
+				34B88CEC206E320C007DE454 /* TKNewsCell.h */,
+				34B88CED206E320C007DE454 /* TKNewsCell.m */,
 			);
 			path = news;
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 		34B88C30206D35CD007DE454 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				34B88CEF206E3515007DE454 /* BaseDefines.h */,
 				34B88C31206D35CD007DE454 /* model */,
 				34B88C4C206D35CD007DE454 /* network */,
 			);
@@ -501,6 +508,7 @@
 				34B88CA2206D35CD007DE454 /* QYPPTableViewSource.m in Sources */,
 				34742616206C972700CF390E /* TKNewsMainController.m in Sources */,
 				34B88C9E206D35CD007DE454 /* QYPPCollectionViewSource.m in Sources */,
+				34B88CEE206E320C007DE454 /* TKNewsCell.m in Sources */,
 				347425E2206C961100CF390E /* ViewController.m in Sources */,
 				34B88C9C206D35CD007DE454 /* TKRequest.m in Sources */,
 				34B88CA0206D35CD007DE454 /* QYPPListViewSource.m in Sources */,
