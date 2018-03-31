@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface TKBaseAPI : NSObject
 
@@ -14,5 +15,10 @@
  * 字符串md5加密
  */
 + (NSString *)md5:(NSString *)string;
+
+/**
+ * 数字处理，大于9999，用万作单位，同理大于9999万用亿作单位
+ */
++ (NSString *)formatNumber:(CGFloat)number;
 
 @end

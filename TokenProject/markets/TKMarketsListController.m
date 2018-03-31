@@ -7,6 +7,8 @@
 //
 
 #import "TKMarketsListController.h"
+#import "TKMarketsSource.h"
+#import "TKMarketsModel.h"
 
 @interface TKMarketsListController ()
 
@@ -17,6 +19,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor redColor];
+    
+    [self registerCell:@"TKMarketsCell" tableViewSource:@"TKMarketsSource" reuseIdentifier:@"TKMarketsCell"];
+    self.tableView.height -= 64+44;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 50, 0);
+    self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    [self startRefresh];
 }
 
 - (void)didReceiveMemoryWarning {

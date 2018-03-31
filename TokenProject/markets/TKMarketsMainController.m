@@ -30,8 +30,8 @@
     NSString *model = device.model;
     NSString *systemVersion = [NSString stringWithFormat:@"%@ %@", device.systemName, device.systemVersion];
     NSString *deviceUUID = [[device identifierForVendor] UUIDString];
-    
     NSString *code = [TKBaseAPI md5:[NSString stringWithFormat:@"thalesky_eos_%lld",Current_TimeInterval]];
+    
     NSDictionary *parameters = @{@"change_type" : @"change_utc0",
                                  @"code" : code,
                                  @"device_model" : model,
@@ -50,7 +50,6 @@
     [request GET:@"http://api.lb.mytoken.org/config/topnavigation" parameters:parameters];
     @weakify(self);
     request.success = ^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"response:%@",responseObject);
         if (!responseObject || ![responseObject isKindOfClass:[TKMarketsModel class]]) return;
         
         @strongify(self);
@@ -77,7 +76,7 @@
     
     for (NSInteger i = 0; i < count; i++) {
         @autoreleasepool{
-            TKMarketsTopNavModel *item = tabs[i];
+            TKMarketsFeedModel *item = tabs[i];
             TKMarketsListController *vc = [[TKMarketsListController alloc] init];
             vc.qypp_tabBarItem = [[QYPPBarItem alloc] initWithTitle:item.name image:nil];
             [vcList addObject:vc];

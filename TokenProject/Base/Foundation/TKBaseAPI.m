@@ -31,4 +31,16 @@
     return  output;
 }
 
+/**
+ * 数字处理，大于9999，用万作单位，同理大于9999万用亿作单位
+ */
++ (NSString *)formatNumber:(CGFloat)number
+{
+    if (number / 100000000.0 > 1) return [NSString stringWithFormat:@"%.2f亿",number/100000000.0];
+    if (number / 10000.0 > 1) return [NSString stringWithFormat:@"%.2f万",number/10000.0];
+    if ((number / 100.0 > 1) && (number / 10000.0 < 1)) return [NSString stringWithFormat:@"%.2f",number];
+    if (number > 0) return [NSString stringWithFormat:@"%.4f",number];
+    return [NSString stringWithFormat:@"%f",number];
+}
+
 @end

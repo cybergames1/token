@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		02EC8A6528A82BE5372E6E75 /* libPods-TokenProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A049B444AF179B09290EA7 /* libPods-TokenProject.a */; };
+		3400C4B6206FCAD5001B3AE9 /* TKMarketsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4B5206FCAD5001B3AE9 /* TKMarketsSource.m */; };
+		3400C4B9206FCB11001B3AE9 /* TKMarketsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4B8206FCB11001B3AE9 /* TKMarketsModel.m */; };
+		3400C4BC206FCC72001B3AE9 /* TKMarketsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4BB206FCC72001B3AE9 /* TKMarketsCell.m */; };
+		3400C4C020700405001B3AE9 /* UIView+QYPPSizes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4BF20700405001B3AE9 /* UIView+QYPPSizes.m */; };
 		347425DF206C961100CF390E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 347425DE206C961100CF390E /* AppDelegate.m */; };
 		347425E2206C961100CF390E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347425E1206C961100CF390E /* ViewController.m */; };
 		347425E5206C961100CF390E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347425E3206C961100CF390E /* Main.storyboard */; };
@@ -18,7 +22,6 @@
 		34742602206C961200CF390E /* TokenProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 34742601206C961200CF390E /* TokenProjectUITests.m */; };
 		34742613206C970800CF390E /* TKMarketsMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34742612206C970800CF390E /* TKMarketsMainController.m */; };
 		34742616206C972700CF390E /* TKNewsMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34742615206C972700CF390E /* TKNewsMainController.m */; };
-		34B88C1F206CF501007DE454 /* TKMarketsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88C1E206CF501007DE454 /* TKMarketsModel.m */; };
 		34B88C8C206D35CD007DE454 /* TKModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88C4B206D35CD007DE454 /* TKModel.m */; };
 		34B88C9C206D35CD007DE454 /* TKRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88C72206D35CD007DE454 /* TKRequest.m */; };
 		34B88C9D206D35CD007DE454 /* QYPPCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88C76206D35CD007DE454 /* QYPPCollectionView.m */; };
@@ -58,6 +61,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3400C4B4206FCAD5001B3AE9 /* TKMarketsSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMarketsSource.h; sourceTree = "<group>"; };
+		3400C4B5206FCAD5001B3AE9 /* TKMarketsSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMarketsSource.m; sourceTree = "<group>"; };
+		3400C4B7206FCB11001B3AE9 /* TKMarketsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMarketsModel.h; sourceTree = "<group>"; };
+		3400C4B8206FCB11001B3AE9 /* TKMarketsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMarketsModel.m; sourceTree = "<group>"; };
+		3400C4BA206FCC72001B3AE9 /* TKMarketsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMarketsCell.h; sourceTree = "<group>"; };
+		3400C4BB206FCC72001B3AE9 /* TKMarketsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMarketsCell.m; sourceTree = "<group>"; };
+		3400C4BE20700405001B3AE9 /* UIView+QYPPSizes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+QYPPSizes.h"; sourceTree = "<group>"; };
+		3400C4BF20700405001B3AE9 /* UIView+QYPPSizes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+QYPPSizes.m"; sourceTree = "<group>"; };
+		3400C4C120700421001B3AE9 /* TKUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKUIKit.h; sourceTree = "<group>"; };
 		347425DA206C961100CF390E /* TokenProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347425DD206C961100CF390E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		347425DE206C961100CF390E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,8 +90,6 @@
 		34742612206C970800CF390E /* TKMarketsMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMarketsMainController.m; sourceTree = "<group>"; };
 		34742614206C972700CF390E /* TKNewsMainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKNewsMainController.h; sourceTree = "<group>"; };
 		34742615206C972700CF390E /* TKNewsMainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKNewsMainController.m; sourceTree = "<group>"; };
-		34B88C1D206CF501007DE454 /* TKMarketsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMarketsModel.h; sourceTree = "<group>"; };
-		34B88C1E206CF501007DE454 /* TKMarketsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMarketsModel.m; sourceTree = "<group>"; };
 		34B88C4A206D35CD007DE454 /* TKModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKModel.h; sourceTree = "<group>"; };
 		34B88C4B206D35CD007DE454 /* TKModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKModel.m; sourceTree = "<group>"; };
 		34B88C71206D35CD007DE454 /* TKRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKRequest.h; sourceTree = "<group>"; };
@@ -150,6 +160,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3400C4BD20700405001B3AE9 /* BaseCategory */ = {
+			isa = PBXGroup;
+			children = (
+				3400C4BE20700405001B3AE9 /* UIView+QYPPSizes.h */,
+				3400C4BF20700405001B3AE9 /* UIView+QYPPSizes.m */,
+			);
+			path = BaseCategory;
+			sourceTree = "<group>";
+		};
 		347425D1206C961100CF390E = {
 			isa = PBXGroup;
 			children = (
@@ -228,10 +247,14 @@
 			children = (
 				34742611206C970800CF390E /* TKMarketsMainController.h */,
 				34742612206C970800CF390E /* TKMarketsMainController.m */,
-				34B88C1D206CF501007DE454 /* TKMarketsModel.h */,
-				34B88C1E206CF501007DE454 /* TKMarketsModel.m */,
 				34B88D10206EA683007DE454 /* TKMarketsListController.h */,
 				34B88D11206EA683007DE454 /* TKMarketsListController.m */,
+				3400C4B4206FCAD5001B3AE9 /* TKMarketsSource.h */,
+				3400C4B5206FCAD5001B3AE9 /* TKMarketsSource.m */,
+				3400C4B7206FCB11001B3AE9 /* TKMarketsModel.h */,
+				3400C4B8206FCB11001B3AE9 /* TKMarketsModel.m */,
+				3400C4BA206FCC72001B3AE9 /* TKMarketsCell.h */,
+				3400C4BB206FCC72001B3AE9 /* TKMarketsCell.m */,
 			);
 			path = markets;
 			sourceTree = "<group>";
@@ -279,6 +302,8 @@
 		34B88C73206D35CD007DE454 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				3400C4C120700421001B3AE9 /* TKUIKit.h */,
+				3400C4BD20700405001B3AE9 /* BaseCategory */,
 				34B88CFF206E85E2007DE454 /* QYPPTabBarController */,
 				34B88C74206D35CD007DE454 /* QYPPCollectionView */,
 				34B88C79206D35CD007DE454 /* QYPPListViewController */,
@@ -564,17 +589,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				34B88CA1206D35CD007DE454 /* QYPPTableView.m in Sources */,
-				34B88C1F206CF501007DE454 /* TKMarketsModel.m in Sources */,
 				34B88D12206EA683007DE454 /* TKMarketsListController.m in Sources */,
 				34B88D0C206E8FB4007DE454 /* NSString+TK.m in Sources */,
 				34B88CFC206E4992007DE454 /* TKNewsDetailController.m in Sources */,
 				34B88C9D206D35CD007DE454 /* QYPPCollectionView.m in Sources */,
 				34B88C8C206D35CD007DE454 /* TKModel.m in Sources */,
+				3400C4B9206FCB11001B3AE9 /* TKMarketsModel.m in Sources */,
 				34B88D07206E85E2007DE454 /* QYPPTabBar.m in Sources */,
 				34B88CA2206D35CD007DE454 /* QYPPTableViewSource.m in Sources */,
 				34B88CF9206E496B007DE454 /* TKNewsSource.m in Sources */,
+				3400C4BC206FCC72001B3AE9 /* TKMarketsCell.m in Sources */,
 				34B88D0F206E921C007DE454 /* TKBaseAPI.m in Sources */,
 				34B88CF8206E496B007DE454 /* TKNewsModel.m in Sources */,
+				3400C4B6206FCAD5001B3AE9 /* TKMarketsSource.m in Sources */,
 				34742616206C972700CF390E /* TKNewsMainController.m in Sources */,
 				34B88C9E206D35CD007DE454 /* QYPPCollectionViewSource.m in Sources */,
 				347425E2206C961100CF390E /* ViewController.m in Sources */,
@@ -582,6 +609,7 @@
 				34B88CA0206D35CD007DE454 /* QYPPListViewSource.m in Sources */,
 				347425ED206C961100CF390E /* main.m in Sources */,
 				347425DF206C961100CF390E /* AppDelegate.m in Sources */,
+				3400C4C020700405001B3AE9 /* UIView+QYPPSizes.m in Sources */,
 				34B88C9F206D35CD007DE454 /* QYPPListViewController.m in Sources */,
 				34B88D08206E85E2007DE454 /* QYPPTabBarController.m in Sources */,
 				34742613206C970800CF390E /* TKMarketsMainController.m in Sources */,
