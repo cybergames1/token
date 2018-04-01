@@ -25,6 +25,10 @@
     self.tableView.height -= 64+44;
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 50, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    
+    TKMarketsSource *source = (TKMarketsSource *)self.tableViewSource;
+    source.marketId = self.marketId;
+    source.marketGroupType = self.marketGroupType;
     [self startRefresh];
 }
 

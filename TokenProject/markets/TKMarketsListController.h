@@ -10,4 +10,7 @@
 
 @interface TKMarketsListController : QYPPListViewController
 
+@property (nonatomic, strong) NSString * marketId;
+@property (nonatomic, strong) NSString * marketGroupType;
+
 @end

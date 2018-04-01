@@ -51,7 +51,7 @@
     cnyPriceLabel_.textColor = UIColorFromRGB(0xcbcbcb);
     self.cnyPriceLabel = cnyPriceLabel_;
     
-    UILabel *percentLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-85, 23, 80, 30)];
+    UILabel *percentLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(SCREEN_WIDTH-82, 23, 72, 30)];
     percentLabel_.font = [UIFont systemFontOfSize:14];
     percentLabel_.textAlignment = NSTextAlignmentCenter;
     percentLabel_.textColor = [UIColor whiteColor];

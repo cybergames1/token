@@ -42,8 +42,8 @@
                                  @"type" : @2,
                                  @"udid" : deviceUUID,
                                  @"v" : @"1.6.5",
-                                 @"group_type" : @2,
-                                 @"id" : @9,
+                                 @"group_type" : self.marketGroupType ?: @1,
+                                 @"id" : self.marketId ?: @0,
                                  @"page" : @1,
                                  @"size" : @20,
                                  };

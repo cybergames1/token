@@ -57,9 +57,11 @@
 {
     TKMarketsMainController *market = [TKMarketsMainController new];
     UINavigationController *marketNav = [[UINavigationController alloc] initWithRootViewController:market];
+    marketNav.tabBarItem.title = @"行情";
     
     TKNewsMainController *news = [TKNewsMainController new];
     UINavigationController *newsNav = [[UINavigationController alloc] initWithRootViewController:news];
+    newsNav.tabBarItem.title = @"资讯";
     
     UITabBarController *tab = [UITabBarController new];
     tab.viewControllers = @[marketNav,newsNav];

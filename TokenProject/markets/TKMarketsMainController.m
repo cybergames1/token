@@ -79,6 +79,8 @@
             TKMarketsFeedModel *item = tabs[i];
             TKMarketsListController *vc = [[TKMarketsListController alloc] init];
             vc.qypp_tabBarItem = [[QYPPBarItem alloc] initWithTitle:item.name image:nil];
+            vc.marketId = item.c_id;
+            vc.marketGroupType = item.group_type;
             [vcList addObject:vc];
         }
     }
