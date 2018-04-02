@@ -39,6 +39,7 @@
     TKNewsSingleModel *item = [self itemDataForIndexPath:indexPath];
     TKNewsDetailController *controller = [[TKNewsDetailController alloc] init];
     controller.urlString = item.extra.topic_url;
+    controller.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:controller animated:YES];
 }
 

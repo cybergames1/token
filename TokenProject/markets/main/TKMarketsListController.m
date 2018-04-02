@@ -9,6 +9,7 @@
 #import "TKMarketsListController.h"
 #import "TKMarketsSource.h"
 #import "TKMarketsModel.h"
+#import "TKMarketsDetailController.h"
 
 @interface TKMarketsListController ()
 
@@ -32,19 +33,14 @@
     [self startRefresh];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TKMarketsFeedModel *item = [self itemDataForIndexPath:indexPath];
+    TKMarketsDetailController *controller = [[TKMarketsDetailController alloc] init];
+    controller.hidesBottomBarWhenPushed = YES;
+    controller.currencyId = item.currency_id;
+    controller.currencyName = item.currency;
+    [self.navigationController pushViewController:controller animated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
