@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * 行情二级页
+ */
 @interface TKMarketsDetailController : UIViewController
 
 @property (nonatomic, strong) NSString * currencyId;

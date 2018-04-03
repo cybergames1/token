@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * 资讯二级页
+ */
 @interface TKNewsDetailController : UIViewController
 
 @property (nonatomic, copy) NSString * urlString;

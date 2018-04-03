@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "TKMarketsMainController.h"
 #import "TKNewsMainController.h"
+#import "TKTimeLineNewsController.h"
+#import "TKMySpaceController.h"
 
 @interface AppDelegate ()
 
@@ -59,12 +61,20 @@
     UINavigationController *marketNav = [[UINavigationController alloc] initWithRootViewController:market];
     marketNav.tabBarItem.title = @"行情";
     
+    TKTimeLineNewsController *timeline = [TKTimeLineNewsController new];
+    UINavigationController *timelineNav = [[UINavigationController alloc] initWithRootViewController:timeline];
+    timelineNav.tabBarItem.title = @"快讯";
+    
     TKNewsMainController *news = [TKNewsMainController new];
     UINavigationController *newsNav = [[UINavigationController alloc] initWithRootViewController:news];
     newsNav.tabBarItem.title = @"资讯";
     
+    TKMySpaceController *my = [TKMySpaceController new];
+    UINavigationController *myNav = [[UINavigationController alloc] initWithRootViewController:my];
+    myNav.tabBarItem.title = @"我的";
+    
     UITabBarController *tab = [UITabBarController new];
-    tab.viewControllers = @[marketNav,newsNav];
+    tab.viewControllers = @[marketNav,timelineNav,newsNav,myNav];
     
     self.window.rootViewController = tab;
     [self.window makeKeyAndVisible];

@@ -21,6 +21,11 @@
 		3400C4E12071FEC6001B3AE9 /* TKMarketsDetailExchangeListSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4E02071FEC6001B3AE9 /* TKMarketsDetailExchangeListSource.m */; };
 		3400C4E42071FEE5001B3AE9 /* TKMarketsDetailExchangeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4E32071FEE5001B3AE9 /* TKMarketsDetailExchangeCell.m */; };
 		3400C4E820720669001B3AE9 /* QYPPAlertView_.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4E720720669001B3AE9 /* QYPPAlertView_.m */; };
+		3400C4F5207277E9001B3AE9 /* TKTimeLineNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4F4207277E9001B3AE9 /* TKTimeLineNewsController.m */; };
+		3400C4F820727817001B3AE9 /* TKMySpaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4F720727817001B3AE9 /* TKMySpaceController.m */; };
+		3400C4FB20728318001B3AE9 /* TKTimeLineNewsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4FA20728318001B3AE9 /* TKTimeLineNewsSource.m */; };
+		3400C4FE2072834B001B3AE9 /* TKTimeLineNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4FD2072834B001B3AE9 /* TKTimeLineNewsModel.m */; };
+		3400C50120728799001B3AE9 /* TKTimeLineNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C50020728799001B3AE9 /* TKTimeLineNewsCell.m */; };
 		347425DF206C961100CF390E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 347425DE206C961100CF390E /* AppDelegate.m */; };
 		347425E2206C961100CF390E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347425E1206C961100CF390E /* ViewController.m */; };
 		347425E5206C961100CF390E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347425E3206C961100CF390E /* Main.storyboard */; };
@@ -96,6 +101,16 @@
 		3400C4E32071FEE5001B3AE9 /* TKMarketsDetailExchangeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMarketsDetailExchangeCell.m; sourceTree = "<group>"; };
 		3400C4E620720669001B3AE9 /* QYPPAlertView_.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYPPAlertView_.h; sourceTree = "<group>"; };
 		3400C4E720720669001B3AE9 /* QYPPAlertView_.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYPPAlertView_.m; sourceTree = "<group>"; };
+		3400C4F3207277E9001B3AE9 /* TKTimeLineNewsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKTimeLineNewsController.h; sourceTree = "<group>"; };
+		3400C4F4207277E9001B3AE9 /* TKTimeLineNewsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTimeLineNewsController.m; sourceTree = "<group>"; };
+		3400C4F620727817001B3AE9 /* TKMySpaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMySpaceController.h; sourceTree = "<group>"; };
+		3400C4F720727817001B3AE9 /* TKMySpaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMySpaceController.m; sourceTree = "<group>"; };
+		3400C4F920728318001B3AE9 /* TKTimeLineNewsSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKTimeLineNewsSource.h; sourceTree = "<group>"; };
+		3400C4FA20728318001B3AE9 /* TKTimeLineNewsSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTimeLineNewsSource.m; sourceTree = "<group>"; };
+		3400C4FC2072834B001B3AE9 /* TKTimeLineNewsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKTimeLineNewsModel.h; sourceTree = "<group>"; };
+		3400C4FD2072834B001B3AE9 /* TKTimeLineNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTimeLineNewsModel.m; sourceTree = "<group>"; };
+		3400C4FF20728799001B3AE9 /* TKTimeLineNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKTimeLineNewsCell.h; sourceTree = "<group>"; };
+		3400C50020728799001B3AE9 /* TKTimeLineNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTimeLineNewsCell.m; sourceTree = "<group>"; };
 		347425DA206C961100CF390E /* TokenProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347425DD206C961100CF390E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		347425DE206C961100CF390E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -236,6 +251,30 @@
 			path = QYPPAlertView;
 			sourceTree = "<group>";
 		};
+		3400C4EB20727712001B3AE9 /* myspace */ = {
+			isa = PBXGroup;
+			children = (
+				3400C4F620727817001B3AE9 /* TKMySpaceController.h */,
+				3400C4F720727817001B3AE9 /* TKMySpaceController.m */,
+			);
+			path = myspace;
+			sourceTree = "<group>";
+		};
+		3400C4EC20727712001B3AE9 /* timeline */ = {
+			isa = PBXGroup;
+			children = (
+				3400C4F3207277E9001B3AE9 /* TKTimeLineNewsController.h */,
+				3400C4F4207277E9001B3AE9 /* TKTimeLineNewsController.m */,
+				3400C4F920728318001B3AE9 /* TKTimeLineNewsSource.h */,
+				3400C4FA20728318001B3AE9 /* TKTimeLineNewsSource.m */,
+				3400C4FC2072834B001B3AE9 /* TKTimeLineNewsModel.h */,
+				3400C4FD2072834B001B3AE9 /* TKTimeLineNewsModel.m */,
+				3400C4FF20728799001B3AE9 /* TKTimeLineNewsCell.h */,
+				3400C50020728799001B3AE9 /* TKTimeLineNewsCell.m */,
+			);
+			path = timeline;
+			sourceTree = "<group>";
+		};
 		347425D1206C961100CF390E = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +304,8 @@
 				34B88C2F206D35CD007DE454 /* Base */,
 				34742610206C96C900CF390E /* markets */,
 				3474260F206C96C900CF390E /* news */,
+				3400C4EB20727712001B3AE9 /* myspace */,
+				3400C4EC20727712001B3AE9 /* timeline */,
 				347425DD206C961100CF390E /* AppDelegate.h */,
 				347425DE206C961100CF390E /* AppDelegate.m */,
 				347425E0206C961100CF390E /* ViewController.h */,
@@ -655,6 +696,7 @@
 				34B88CA1206D35CD007DE454 /* QYPPTableView.m in Sources */,
 				34B88D0C206E8FB4007DE454 /* NSString+TK.m in Sources */,
 				34B88CFC206E4992007DE454 /* TKNewsDetailController.m in Sources */,
+				3400C4FB20728318001B3AE9 /* TKTimeLineNewsSource.m in Sources */,
 				3400C4DE2071F5DF001B3AE9 /* TKMarketsDetailMarketCell.m in Sources */,
 				34B88C9D206D35CD007DE454 /* QYPPCollectionView.m in Sources */,
 				3400C4CC20714C3A001B3AE9 /* TKMarketsListController.m in Sources */,
@@ -669,13 +711,17 @@
 				3400C4CD20714C3A001B3AE9 /* TKMarketsModel.m in Sources */,
 				34742616206C972700CF390E /* TKNewsMainController.m in Sources */,
 				34B88C9E206D35CD007DE454 /* QYPPCollectionViewSource.m in Sources */,
+				3400C50120728799001B3AE9 /* TKTimeLineNewsCell.m in Sources */,
 				3400C4D520714CD7001B3AE9 /* TKMarketsDetailListController.m in Sources */,
+				3400C4FE2072834B001B3AE9 /* TKTimeLineNewsModel.m in Sources */,
 				347425E2206C961100CF390E /* ViewController.m in Sources */,
 				34B88C9C206D35CD007DE454 /* TKRequest.m in Sources */,
 				34B88CA0206D35CD007DE454 /* QYPPListViewSource.m in Sources */,
 				347425ED206C961100CF390E /* main.m in Sources */,
 				3400C4E42071FEE5001B3AE9 /* TKMarketsDetailExchangeCell.m in Sources */,
 				347425DF206C961100CF390E /* AppDelegate.m in Sources */,
+				3400C4F5207277E9001B3AE9 /* TKTimeLineNewsController.m in Sources */,
+				3400C4F820727817001B3AE9 /* TKMySpaceController.m in Sources */,
 				3400C4C020700405001B3AE9 /* UIView+QYPPSizes.m in Sources */,
 				3400C4E820720669001B3AE9 /* QYPPAlertView_.m in Sources */,
 				34B88C9F206D35CD007DE454 /* QYPPListViewController.m in Sources */,
