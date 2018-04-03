@@ -10,6 +10,12 @@
 #import "TKMarketsModel.h"
 #import "TKMarketsDetailMarketCell.h"
 
+@interface TKMarketsDetailMarketListSource ()
+
+@property (nonatomic, assign) NSInteger page;
+
+@end
+
 @implementation TKMarketsDetailMarketListSource
 
 - (id)initWithDelegate:(id<QYPPListViewSourceDelegate>)delegate cellClass:(NSString *)cellClassName cellIdentifier:(NSString *)cellIdentifier cellViewModelType:(NSString *)cellViewModelType
@@ -22,6 +28,20 @@
 }
 
 - (void)freshDataSource
+{
+    self.page = 1;
+    [self requestData];
+    self.request.isLoadMore = NO;
+}
+
+- (void)loadMoreDataSource
+{
+    self.page ++;
+    [self requestData];
+    self.request.isLoadMore = YES;
+}
+
+- (void)requestData
 {
     UIDevice *device = [UIDevice currentDevice];
     NSString *model = device.model;
@@ -42,7 +62,7 @@
                                  @"udid" : deviceUUID,
                                  @"v" : @"1.6.5",
                                  @"currency_id" : self.currencyId ?: @"",
-                                 @"page" : @1,
+                                 @"page" : @(self.page),
                                  @"size" : @20,
                                  };
     
@@ -55,7 +75,11 @@
     if (!data || ![data isKindOfClass:[TKMarketsModel class]]) return [NSArray array];
     
     NSArray *maketsList = [[(TKMarketsModel *)data data] list];
-    [self updateData:maketsList atSection:0];
+    if (!self.request.isLoadMore) {
+        [self updateData:maketsList atSection:0];
+    }else {
+        [self appendData:maketsList atSection:0];
+    }
     return maketsList;
 }
 

@@ -11,6 +11,12 @@
 #import "TKMarketsCell.h"
 #import "UIImageView+WebCache.h"
 
+@interface TKMarketsSource ()
+
+@property (nonatomic, assign) NSInteger page;
+
+@end
+
 @implementation TKMarketsSource
 
 - (id)initWithDelegate:(id<QYPPListViewSourceDelegate>)delegate cellClass:(NSString *)cellClassName cellIdentifier:(NSString *)cellIdentifier cellViewModelType:(NSString *)cellViewModelType
@@ -23,6 +29,20 @@
 }
 
 - (void)freshDataSource
+{
+    self.page = 1;
+    [self requestData];
+    self.request.isLoadMore = NO;
+}
+
+- (void)loadMoreDataSource
+{
+    self.page ++;
+    [self requestData];
+    self.request.isLoadMore = YES;
+}
+
+- (void)requestData
 {
     UIDevice *device = [UIDevice currentDevice];
     NSString *model = device.model;
@@ -44,7 +64,7 @@
                                  @"v" : @"1.6.5",
                                  @"group_type" : self.marketGroupType ?: @1,
                                  @"id" : self.marketId ?: @0,
-                                 @"page" : @1,
+                                 @"page" : @(self.page),
                                  @"size" : @20,
                                  };
     
@@ -57,7 +77,12 @@
     if (!data || ![data isKindOfClass:[TKMarketsModel class]]) return [NSArray array];
     
     NSArray *maketsList = [[(TKMarketsModel *)data data] list];
-    [self updateData:maketsList atSection:0];
+    if (!self.request.isLoadMore) {
+        [self updateData:maketsList atSection:0];
+    }else {
+        [self appendData:maketsList atSection:0];
+    }
+    
     return maketsList;
 }
 

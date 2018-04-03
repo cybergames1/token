@@ -14,12 +14,13 @@
 {
     _showPullRefresh = showPullRefresh;
     
-    self.mj_header.hidden = showPullRefresh ? NO : YES;
+    MJRefreshNormalHeader *header = (MJRefreshNormalHeader *)self.mj_header;
+    header.hidden = showPullRefresh ? NO : YES;
     
     if (showPullRefresh) {
-//        [self.header setTitle:@"下拉刷新" forState:MJRefreshHeaderStateIdle];
-//        [self.header setTitle:@"释放刷新" forState:MJRefreshHeaderStatePulling];
-//        [self.header setTitle:@"正在刷新" forState:MJRefreshHeaderStateRefreshing];
+        [header setTitle:@"下拉刷新" forState:MJRefreshStateIdle];
+        [header setTitle:@"释放刷新" forState:MJRefreshStatePulling];
+        [header setTitle:@"正在加载..." forState:MJRefreshStateRefreshing];
     }
 }
 
@@ -27,12 +28,14 @@
 {
     _showPushLoadMore = showPushLoadMore;
     
-    self.mj_footer.hidden = showPushLoadMore ? NO : YES;
+    MJRefreshBackNormalFooter *footer = (MJRefreshBackNormalFooter *)self.mj_footer;
+    footer.hidden = showPushLoadMore ? NO : YES;
     
     if (showPushLoadMore) {
-        //[self.footer setTitle:@"上拉显示更多" forState:MJRefreshFooterStateIdle];
-//        [self.footer setTitle:@"小泡正在全力加载中..." forState:MJRefreshFooterStateRefreshing];
-//        [self.footer setTitle:@"没有更多了" forState:MJRefreshFooterStateNoMoreData];
+        [footer setTitle:@"上拉加载" forState:MJRefreshStateIdle];
+        [footer setTitle:@"释放加载" forState:MJRefreshStatePulling];
+        [footer setTitle:@"正在加载..." forState:MJRefreshStateRefreshing];
+        [footer setTitle:@"没有更多了" forState:MJRefreshStateNoMoreData];
     }
 }
 

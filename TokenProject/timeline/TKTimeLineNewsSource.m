@@ -39,6 +39,7 @@
                                  };
     
     TKRequest *request = self.request;
+    request.isLoadMore = NO;
     [request GET:@"http://api.jinse.com/v3/live/list" parameters:parameters];
 }
 
@@ -51,6 +52,7 @@
                                  };
     
     TKRequest *request = self.request;
+    request.isLoadMore = YES;
     [request GET:@"http://api.jinse.com/v3/live/list" parameters:parameters];
 }
 
@@ -84,7 +86,11 @@
             live.viewModel = viewModel;
         }
     }
-    [self updateData:newsList atSection:0];
+    if (!self.request.isLoadMore) {
+        [self updateData:newsList atSection:0];
+    }else {
+        [self appendData:newsList atSection:0];
+    }
     
     return newsList;
 }

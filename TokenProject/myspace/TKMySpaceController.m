@@ -17,21 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"我的";
+    self.view.backgroundColor = UIColorFromRGB(0xeeeeee);
+    
+    [self registerCell:@"UITableViewCell" tableViewSource:@"TKMySpaceSource" reuseIdentifier:@"TKMySpaceCell"];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    [self startRefresh];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 22)];
+    view.backgroundColor = self.view.backgroundColor;
+    return view;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -41,7 +41,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = UIColorFromRGB(0xeeeeee);
     
     NSString *cellClassName = (self.tabType == 1) ? @"TKMarketsDetailMarketCell" : @"TKMarketsDetailExchangeCell";
     NSString *sourceClassName = (self.tabType == 1) ? @"TKMarketsDetailMarketListSource" : @"TKMarketsDetailExchangeListSource";
@@ -50,7 +50,8 @@
     
     TKMarketsDetailMarketListSource *source = (TKMarketsDetailMarketListSource *)self.tableViewSource;
     source.currencyId = self.currencyId;
-    [self startRefresh];
+    
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)urlActionAtCell:(TKMarketsDetailExchangeCell *)cell

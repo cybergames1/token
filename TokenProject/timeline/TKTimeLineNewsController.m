@@ -20,10 +20,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"快讯";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = UIColorFromRGB(0xeeeeee);
     
     [self registerCell:@"TKTimeLineNewsCell" tableViewSource:@"TKTimeLineNewsSource" reuseIdentifier:@"TKTimeLineNewsCell"];
-    [self startRefresh];
+    [self.tableView.mj_header beginRefreshing];
 }
 
 @end

@@ -21,10 +21,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"资讯";
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = UIColorFromRGB(0xeeeeee);
     
     [self registerCell:@"TKNewsCell" tableViewSource:@"TKNewsSource" reuseIdentifier:@"TKNewsCell"];
-    [self startRefresh];
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)didReceiveMemoryWarning {

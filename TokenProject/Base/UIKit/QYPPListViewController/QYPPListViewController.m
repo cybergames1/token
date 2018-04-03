@@ -79,9 +79,7 @@
     if (self.tableView) [self.tableView reloadData];
     if (self.collectionView) [self.collectionView reloadData];
     
-    //[scrollView.mj_footer setTitle:@"小泡正在全力加载中..." forState:MJRefreshFooterStateRefreshing];
     [scrollView.mj_header endRefreshing];
-    
     scrollView.mj_footer.state = listViewSource.canLoadMore ? MJRefreshStateIdle : MJRefreshStateNoMoreData;
     scrollView.hidden = NO;
     
@@ -95,8 +93,6 @@
 - (void)listViewSourceDidFailure:(QYPPListViewSource *)listViewSource
 {
     UIScrollView *scrollView = self.tableView ? self.tableView : self.collectionView;
-    //[scrollView.footer setTitle:@"小泡正在全力加载中..." forState:MJRefreshFooterStateRefreshing];
-    
     scrollView.hidden = NO;
     
     if (listViewSource.request.isLoadMore) {
@@ -172,16 +168,13 @@
     
     self.tableView.dataSource = self.tableViewSource;
     
-    @weakify(self)
-        [self.tableView.mj_header setRefreshingBlock:^{
-            @strongify(self)
-            [self startRefresh];
-        }];
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(startRefresh)];
+    header.automaticallyChangeAlpha = YES;
+    header.lastUpdatedTimeLabel.hidden = YES;
+    self.tableView.mj_header = header;
     
-    [self.tableView.mj_footer setRefreshingBlock:^{
-        @strongify(self)
-        [self startLoadMore];
-    }];
+    MJRefreshBackNormalFooter *footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(startLoadMore)];
+    self.tableView.mj_footer = footer;
     
     self.tableView.showPullRefresh = YES;
     self.tableView.showPushLoadMore = YES;

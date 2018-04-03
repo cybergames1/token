@@ -26,6 +26,8 @@
 		3400C4FB20728318001B3AE9 /* TKTimeLineNewsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4FA20728318001B3AE9 /* TKTimeLineNewsSource.m */; };
 		3400C4FE2072834B001B3AE9 /* TKTimeLineNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4FD2072834B001B3AE9 /* TKTimeLineNewsModel.m */; };
 		3400C50120728799001B3AE9 /* TKTimeLineNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C50020728799001B3AE9 /* TKTimeLineNewsCell.m */; };
+		3400C50620739658001B3AE9 /* TKMySpaceSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C50520739658001B3AE9 /* TKMySpaceSource.m */; };
+		3400C50920739711001B3AE9 /* TKMySpaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C50820739711001B3AE9 /* TKMySpaceModel.m */; };
 		347425DF206C961100CF390E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 347425DE206C961100CF390E /* AppDelegate.m */; };
 		347425E2206C961100CF390E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347425E1206C961100CF390E /* ViewController.m */; };
 		347425E5206C961100CF390E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347425E3206C961100CF390E /* Main.storyboard */; };
@@ -111,6 +113,10 @@
 		3400C4FD2072834B001B3AE9 /* TKTimeLineNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTimeLineNewsModel.m; sourceTree = "<group>"; };
 		3400C4FF20728799001B3AE9 /* TKTimeLineNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKTimeLineNewsCell.h; sourceTree = "<group>"; };
 		3400C50020728799001B3AE9 /* TKTimeLineNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTimeLineNewsCell.m; sourceTree = "<group>"; };
+		3400C50420739658001B3AE9 /* TKMySpaceSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMySpaceSource.h; sourceTree = "<group>"; };
+		3400C50520739658001B3AE9 /* TKMySpaceSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMySpaceSource.m; sourceTree = "<group>"; };
+		3400C50720739711001B3AE9 /* TKMySpaceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMySpaceModel.h; sourceTree = "<group>"; };
+		3400C50820739711001B3AE9 /* TKMySpaceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMySpaceModel.m; sourceTree = "<group>"; };
 		347425DA206C961100CF390E /* TokenProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347425DD206C961100CF390E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		347425DE206C961100CF390E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -256,6 +262,10 @@
 			children = (
 				3400C4F620727817001B3AE9 /* TKMySpaceController.h */,
 				3400C4F720727817001B3AE9 /* TKMySpaceController.m */,
+				3400C50420739658001B3AE9 /* TKMySpaceSource.h */,
+				3400C50520739658001B3AE9 /* TKMySpaceSource.m */,
+				3400C50720739711001B3AE9 /* TKMySpaceModel.h */,
+				3400C50820739711001B3AE9 /* TKMySpaceModel.m */,
 			);
 			path = myspace;
 			sourceTree = "<group>";
@@ -702,6 +712,7 @@
 				3400C4CC20714C3A001B3AE9 /* TKMarketsListController.m in Sources */,
 				3400C4DB2071F2F2001B3AE9 /* TKMarketsDetailMarketListSource.m in Sources */,
 				34B88C8C206D35CD007DE454 /* TKModel.m in Sources */,
+				3400C50920739711001B3AE9 /* TKMySpaceModel.m in Sources */,
 				34B88D07206E85E2007DE454 /* QYPPTabBar.m in Sources */,
 				34B88CA2206D35CD007DE454 /* QYPPTableViewSource.m in Sources */,
 				34B88CF9206E496B007DE454 /* TKNewsSource.m in Sources */,
@@ -712,6 +723,7 @@
 				34742616206C972700CF390E /* TKNewsMainController.m in Sources */,
 				34B88C9E206D35CD007DE454 /* QYPPCollectionViewSource.m in Sources */,
 				3400C50120728799001B3AE9 /* TKTimeLineNewsCell.m in Sources */,
+				3400C50620739658001B3AE9 /* TKMySpaceSource.m in Sources */,
 				3400C4D520714CD7001B3AE9 /* TKMarketsDetailListController.m in Sources */,
 				3400C4FE2072834B001B3AE9 /* TKTimeLineNewsModel.m in Sources */,
 				347425E2206C961100CF390E /* ViewController.m in Sources */,

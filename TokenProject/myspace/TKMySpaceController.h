@@ -6,11 +6,11 @@
 //  Copyright © 2018年 刘建廷. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "QYPPListViewController.h"
 
 /**
  * 我的首页
  */
-@interface TKMySpaceController : UIViewController
+@interface TKMySpaceController : QYPPListViewController
 
 @end

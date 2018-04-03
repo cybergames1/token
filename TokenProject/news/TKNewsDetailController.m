@@ -18,7 +18,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = UIColorFromRGB(0xeeeeee);
     self.title = @"资讯详情";
     
     NSLog(@"html url string:%@",self.urlString);

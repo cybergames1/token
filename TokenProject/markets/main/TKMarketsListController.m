@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = UIColorFromRGB(0xeeeeee);
     
     [self registerCell:@"TKMarketsCell" tableViewSource:@"TKMarketsSource" reuseIdentifier:@"TKMarketsCell"];
     self.tableView.height -= 64+44;
@@ -30,7 +30,8 @@
     TKMarketsSource *source = (TKMarketsSource *)self.tableViewSource;
     source.marketId = self.marketId;
     source.marketGroupType = self.marketGroupType;
-    [self startRefresh];
+    
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
