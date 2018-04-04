@@ -40,6 +40,7 @@ try{} @finally{} __typeof__(x) x = __block_##x##__; \
 
 #import "BaseDefines.h"
 #import "TKBaseAPI.h"
+#import "TKCache.h"
 #import "TKUIKit.h"
 
 

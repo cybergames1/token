@@ -32,6 +32,7 @@
 		3400C5192073DF15001B3AE9 /* TKMySpaceAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C5182073DF15001B3AE9 /* TKMySpaceAboutController.m */; };
 		3400C5202073DFD4001B3AE9 /* TKLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C51F2073DFD4001B3AE9 /* TKLoginController.m */; };
 		3400C5272074B9AF001B3AE9 /* TKImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3400C5262074B9AF001B3AE9 /* TKImages.xcassets */; };
+		3400C52D2074FFE8001B3AE9 /* TKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C52C2074FFE8001B3AE9 /* TKCache.m */; };
 		347425DF206C961100CF390E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 347425DE206C961100CF390E /* AppDelegate.m */; };
 		347425E5206C961100CF390E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347425E3206C961100CF390E /* Main.storyboard */; };
 		347425E7206C961100CF390E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347425E6206C961100CF390E /* Assets.xcassets */; };
@@ -126,6 +127,8 @@
 		3400C51E2073DFD4001B3AE9 /* TKLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKLoginController.h; sourceTree = "<group>"; };
 		3400C51F2073DFD4001B3AE9 /* TKLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKLoginController.m; sourceTree = "<group>"; };
 		3400C5262074B9AF001B3AE9 /* TKImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TKImages.xcassets; sourceTree = "<group>"; };
+		3400C52B2074FFE8001B3AE9 /* TKCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKCache.h; sourceTree = "<group>"; };
+		3400C52C2074FFE8001B3AE9 /* TKCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKCache.m; sourceTree = "<group>"; };
 		347425DA206C961100CF390E /* TokenProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347425DD206C961100CF390E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		347425DE206C961100CF390E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -321,6 +324,15 @@
 			path = login;
 			sourceTree = "<group>";
 		};
+		3400C52A2074FFD5001B3AE9 /* cache */ = {
+			isa = PBXGroup;
+			children = (
+				3400C52B2074FFE8001B3AE9 /* TKCache.h */,
+				3400C52C2074FFE8001B3AE9 /* TKCache.m */,
+			);
+			path = cache;
+			sourceTree = "<group>";
+		};
 		347425D1206C961100CF390E = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +363,7 @@
 				3474260F206C96C900CF390E /* news */,
 				3400C4EB20727712001B3AE9 /* myspace */,
 				3400C4EC20727712001B3AE9 /* timeline */,
+				3400C52A2074FFD5001B3AE9 /* cache */,
 				347425DD206C961100CF390E /* AppDelegate.h */,
 				347425DE206C961100CF390E /* AppDelegate.m */,
 				347425E3206C961100CF390E /* Main.storyboard */,
@@ -777,6 +790,7 @@
 				3400C4E12071FEC6001B3AE9 /* TKMarketsDetailExchangeListSource.m in Sources */,
 				3400C4D820714F9A001B3AE9 /* TKMarketsTabSource.m in Sources */,
 				34742613206C970800CF390E /* TKMarketsMainController.m in Sources */,
+				3400C52D2074FFE8001B3AE9 /* TKCache.m in Sources */,
 				3400C4CE20714C3A001B3AE9 /* TKMarketsSource.m in Sources */,
 				34B88D06206E85E2007DE454 /* QYPPBarItem.m in Sources */,
 				34B88CF7206E496B007DE454 /* TKNewsCell.m in Sources */,

@@ -52,6 +52,7 @@
     
     TKMySpaceModel *clearcache = [TKMySpaceModel new];
     clearcache.title = @"清除缓存";
+    clearcache.detail = [TKBaseAPI fileSizeWithInteger:[[TKCache sharedCache] cacheSize]];
     clearcache.viewModel = vm1;
     
     NSArray *section3 = @[clearcache];

@@ -69,7 +69,6 @@
     TKRequest *request = [TKRequest new];
     [request GET:@"http://api.lb.mytoken.org/currency/refreshprice" parameters:parameters];
     request.success = ^(NSURLSessionDataTask *task, id responseObject) {
-        NSLog(@"request:%@",task.originalRequest.URL);
         @strongify(self);
         if (!responseObject || ![responseObject isKindOfClass:[NSDictionary class]]) return ;
         if (self.viewModelList.count <= 0) return;
@@ -77,8 +76,12 @@
         NSArray *list = [responseObject objectForKey:@"data"];
         if (!list || [list count] <= 0) return;
         
+        NSInteger lastCount = [self.viewModelList[0] count];
+        NSInteger currCount = [list count];
+        NSInteger count = MIN(lastCount, currCount);
+        
         dispatch_async(_queue, ^{
-            for (NSInteger i = 0; i < [self.viewModelList[0] count]; i++) {
+            for (NSInteger i = 0; i < count; i++) {
                 @autoreleasepool {
                     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
                     TKMarketsFeedModel *feed = [self itemDataForIndexPath:indexPath];

@@ -47,7 +47,7 @@
 {
     NSDictionary *parameters = @{@"limit" : @20,
                                  @"flag" : @"down",
-                                 @"information_id" : self.bottomId ?: @"0",
+                                 @"id" : self.bottomId ?: @"0",
                                  @"version" : @"2.5.0",
                                  };
     
@@ -75,7 +75,7 @@
             
             NSDate *date = [NSDate dateWithTimeIntervalSince1970:[live.created_at longLongValue]];
             NSDateFormatter *formatter = [NSDateFormatter new];
-            formatter.dateFormat = @"YYYY-MM-dd hh:ss";
+            formatter.dateFormat = @"yyyy-MM-dd HH:mm";
             NSString *formatTime = [formatter stringFromDate:date];
             
             TKTimeLineNewsLiveViewModel *viewModel = [TKTimeLineNewsLiveViewModel new];

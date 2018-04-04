@@ -21,4 +21,9 @@
  */
 + (NSString *)formatNumber:(CGFloat)number;
 
+/**
+ * 文件大小转为字符串形式
+ */
++ (NSString *)fileSizeWithInteger:(NSInteger)size;
+
 @end

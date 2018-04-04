@@ -10,6 +10,8 @@
 #import "TKLoginController.h"
 #import "TKMySpaceShareController.h"
 #import "TKMySpaceAboutController.h"
+#import "MBProgressHUD.h"
+#import "TKMySpaceModel.h"
 
 @interface TKMySpaceController ()
 
@@ -25,6 +27,8 @@
     
     [self registerCell:@"UITableViewCell" tableViewSource:@"TKMySpaceSource" reuseIdentifier:@"TKMySpaceCell"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.tableView.showPullRefresh = NO;
+    self.tableView.showPushLoadMore = NO;
     [self startRefresh];
 }
 
@@ -50,6 +54,20 @@
         //关于
     }else if (indexPath.section == 2 && indexPath.row == 0) {
         //清除缓存
+        @weakify(self);
+        [[TKCache sharedCache] clearAllCacheCompletion:^{
+            @strongify(self);
+            TKMySpaceModel *item = [self itemDataForIndexPath:indexPath];
+            if (item.detail.length <= 0) return ;
+            
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.mode = MBProgressHUDModeText;
+            hud.label.text = @"清除完成";
+            [hud hideAnimated:YES afterDelay:2];
+            
+            item.detail = @"";
+            [self reloadCellAtIndexPath:indexPath withData:item];
+        }];
     }else {
         //其他
     }

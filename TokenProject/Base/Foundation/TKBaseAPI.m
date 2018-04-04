@@ -43,4 +43,25 @@
     return [NSString stringWithFormat:@"%f",number];
 }
 
+/**
+ * 文件大小转为字符串形式
+ */
++ (NSString *)fileSizeWithInteger:(NSInteger)size
+{
+    if (size <= 0) return @"";
+    
+    if (size < 1024) {// 小于1k
+        return [NSString stringWithFormat:@"%ldB",(long)size];
+    }else if (size < 1024 * 1024){// 小于1m
+        CGFloat aFloat = size/1024;
+        return [NSString stringWithFormat:@"%.0fK",aFloat];
+    }else if (size < 1024 * 1024 * 1024){// 小于1G
+        CGFloat aFloat = size/(1024 * 1024);
+        return [NSString stringWithFormat:@"%.1fM",aFloat];
+    }else{
+        CGFloat aFloat = size/(1024*1024*1024);
+        return [NSString stringWithFormat:@"%.1fG",aFloat];
+    }
+}
+
 @end

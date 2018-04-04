@@ -75,7 +75,7 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:self.cellIdentifier];
     if (cell == nil && self.cellClass) {
-        cell = [[self.cellClass alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:self.cellIdentifier];
+        cell = [[self.cellClass alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:self.cellIdentifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     [self prepareCell:cell forIndexPath:indexPath];

@@ -17,6 +17,8 @@
 
 @interface TKMarketsMainController ()
 
+@property (nonatomic, strong) UIActivityIndicatorView * indicatorView;
+
 @end
 
 @implementation TKMarketsMainController
@@ -26,6 +28,7 @@
     // Do any additional setup after loading the view.
     self.title = @"行情";
     self.view.backgroundColor = UIColorFromRGB(0xeeeeee);
+    [self showLoading];
     
     @weakify(self);
     TKMarketsTabSource *tabSource = [TKMarketsTabSource new];
@@ -34,12 +37,28 @@
      {
         if (!responseObject || ![responseObject isKindOfClass:[TKMarketsModel class]]) return;
         @strongify(self);
+        [self stopLoading];
         [self loadTabBarControllerWithData:responseObject];
     }
                      failure:^(NSURLSessionDataTask *task, NSError *error)
     {
         NSLog(@"failure:%@",error.description);
     }];
+}
+
+- (void)showLoading
+{
+    UIActivityIndicatorView *indicatorView_ = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
+    indicatorView_.center = self.view.center;
+    indicatorView_.hidesWhenStopped = YES;
+    [self.view addSubview:indicatorView_];
+    self.indicatorView = indicatorView_;
+    [_indicatorView startAnimating];
+}
+
+- (void)stopLoading
+{
+    [_indicatorView stopAnimating];
 }
 
 //通过服务器返回的tab列表，加载tabBar
