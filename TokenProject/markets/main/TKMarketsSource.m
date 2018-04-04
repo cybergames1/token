@@ -14,6 +14,7 @@
 @interface TKMarketsSource ()
 
 @property (nonatomic, assign) NSInteger page;
+@property (nonatomic, strong) dispatch_queue_t queue;
 
 @end
 
@@ -24,8 +25,89 @@
     self = [super initWithDelegate:delegate cellClass:cellClassName cellIdentifier:cellIdentifier cellViewModelType:cellViewModelType];
     if (self) {
         [self registerNetRequest:@"TKRequest" responseDataModel:@"TKMarketsModel"];
+        self.queue = dispatch_queue_create("mergeRefreshPriceQueue", DISPATCH_QUEUE_SERIAL);
     }
     return self;
+}
+
+- (void)refreshPrice
+{
+    if (self.viewModelList.count <= 0) return;
+    
+    NSMutableString *pairlist = [NSMutableString stringWithCapacity:0];
+    for (NSInteger i = 0; i < [self.viewModelList[0] count]; i++) {
+        @autoreleasepool {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+            TKMarketsFeedModel *feed = [self itemDataForIndexPath:indexPath];
+            NSString *pair = [NSString stringWithFormat:@"%@_%@_%@_%@",self.tabId,feed.name,feed.currency,feed.anchor];
+            [pairlist appendFormat:@"%@,",pair];
+        }
+    }
+    
+    UIDevice *device = [UIDevice currentDevice];
+    NSString *model = device.model;
+    NSString *systemVersion = [NSString stringWithFormat:@"%@ %@", device.systemName, device.systemVersion];
+    NSString *deviceUUID = [[device identifierForVendor] UUIDString];
+    NSString *code = [TKBaseAPI md5:[NSString stringWithFormat:@"thalesky_eos_%lld",Current_TimeInterval]];
+    
+    NSDictionary *parameters = @{@"change_type" : @"change_utc0",
+                                 @"code" : code,
+                                 @"device_model" : model,
+                                 @"device_os" : systemVersion,
+                                 @"language" : @"zh_CN",
+                                 @"legal_currency" : @"CNY",
+                                 @"mytoken" : @"d10a54b9c85586a5af9a6218e580ec99",
+                                 @"pair_list" : pairlist ?: @"",
+                                 @"platform" : @"ios",
+                                 @"timestamp" : @(Current_TimeInterval),
+                                 @"type" : @2,
+                                 @"udid" : deviceUUID,
+                                 @"v" : @"1.6.5",
+                                 };
+    
+    @weakify(self);
+    TKRequest *request = [TKRequest new];
+    [request GET:@"http://api.lb.mytoken.org/currency/refreshprice" parameters:parameters];
+    request.success = ^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"request:%@",task.originalRequest.URL);
+        @strongify(self);
+        if (!responseObject || ![responseObject isKindOfClass:[NSDictionary class]]) return ;
+        if (self.viewModelList.count <= 0) return;
+        
+        NSArray *list = [responseObject objectForKey:@"data"];
+        if (!list || [list count] <= 0) return;
+        
+        dispatch_async(_queue, ^{
+            for (NSInteger i = 0; i < [self.viewModelList[0] count]; i++) {
+                @autoreleasepool {
+                    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+                    TKMarketsFeedModel *feed = [self itemDataForIndexPath:indexPath];
+                    NSDictionary *dic = list[i];
+                    
+                    TKMarketsViewModel *vm = [TKMarketsViewModel new];
+                    CGFloat lastPrice = [feed.price_display_cny floatValue];
+                    CGFloat currPirce = [dic[@"price_display_cny"] floatValue];
+                    if (lastPrice > currPirce) {
+                        vm.priceState = 2;
+                    }else if (lastPrice < currPirce) {
+                        vm.priceState = 1;
+                    }else {
+                        vm.priceState = 0;
+                    }
+                    feed.price_display = dic[@"price_display"];
+                    feed.price_display_cny = dic[@"price_display_cny"];
+                    feed.percent_change_display = dic[@"percent_change_display"];
+                    feed.viewModel = vm;
+                }
+            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (self.delegate && [self.delegate respondsToSelector:@selector(listViewSourceDidFinish:)]) {
+                    [self.delegate listViewSourceDidFinish:self];
+                }
+            });
+        });
+    };
 }
 
 - (void)freshDataSource
@@ -89,15 +171,17 @@
 - (void)prepareCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath
 {
     TKMarketsFeedModel *itemModel = [self itemDataForIndexPath:indexPath];
-    TKMarketsCell *newsCell = (TKMarketsCell *)cell;
-    newsCell.titleLabel.text = [self p_title:itemModel];
-    newsCell.marketLabel.text = itemModel.pair;
-    newsCell.amountLabel.text = [self p_amount:itemModel];
-    [newsCell.iconView sd_setImageWithURL:[NSURL URLWithString:itemModel.logo]];
-    newsCell.priceLabel.text = itemModel.price_display;
-    newsCell.cnyPriceLabel.text = [self p_cnyPrice:itemModel.price_display_cny];
-    newsCell.percentLabel.text = [self p_percent:itemModel.percent_change_display];
-    newsCell.percentLabel.backgroundColor = [self p_percent_color:itemModel.percent_change_display];
+    TKMarketsViewModel *viewModel = (TKMarketsViewModel *)itemModel.viewModel;
+    TKMarketsCell *marketsCell = (TKMarketsCell *)cell;
+    marketsCell.titleLabel.text = [self p_title:itemModel];
+    marketsCell.marketLabel.text = itemModel.pair;
+    marketsCell.amountLabel.text = [self p_amount:itemModel];
+    [marketsCell.iconView sd_setImageWithURL:[NSURL URLWithString:itemModel.logo]];
+    marketsCell.priceLabel.text = itemModel.price_display;
+    marketsCell.cnyPriceLabel.text = [self p_cnyPrice:itemModel.price_display_cny];
+    marketsCell.percentLabel.text = [self p_percent:itemModel.percent_change_display];
+    marketsCell.percentLabel.backgroundColor = [self p_percent_color:itemModel.percent_change_display];
+    marketsCell.priceState = viewModel.priceState;
 }
 
 - (CGFloat)cellHeightAtIndexPath:(NSIndexPath *)indexPath

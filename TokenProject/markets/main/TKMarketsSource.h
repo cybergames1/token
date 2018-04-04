@@ -10,7 +10,10 @@
 
 @interface TKMarketsSource : QYPPTableViewSource
 
+@property (nonatomic, strong) NSString * tabId;
 @property (nonatomic, strong) NSString * marketId;
 @property (nonatomic, strong) NSString * marketGroupType;
+
+- (void)refreshPrice;
 
 @end

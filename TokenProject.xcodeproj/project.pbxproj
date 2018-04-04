@@ -26,10 +26,12 @@
 		3400C4FB20728318001B3AE9 /* TKTimeLineNewsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4FA20728318001B3AE9 /* TKTimeLineNewsSource.m */; };
 		3400C4FE2072834B001B3AE9 /* TKTimeLineNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C4FD2072834B001B3AE9 /* TKTimeLineNewsModel.m */; };
 		3400C50120728799001B3AE9 /* TKTimeLineNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C50020728799001B3AE9 /* TKTimeLineNewsCell.m */; };
-		3400C50620739658001B3AE9 /* TKMySpaceSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C50520739658001B3AE9 /* TKMySpaceSource.m */; };
-		3400C50920739711001B3AE9 /* TKMySpaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C50820739711001B3AE9 /* TKMySpaceModel.m */; };
+		3400C5112073DCEB001B3AE9 /* TKMySpaceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C50E2073DCEA001B3AE9 /* TKMySpaceModel.m */; };
+		3400C5122073DCEB001B3AE9 /* TKMySpaceSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C5102073DCEA001B3AE9 /* TKMySpaceSource.m */; };
+		3400C5162073DEE0001B3AE9 /* TKMySpaceShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C5152073DEE0001B3AE9 /* TKMySpaceShareController.m */; };
+		3400C5192073DF15001B3AE9 /* TKMySpaceAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C5182073DF15001B3AE9 /* TKMySpaceAboutController.m */; };
+		3400C5202073DFD4001B3AE9 /* TKLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C51F2073DFD4001B3AE9 /* TKLoginController.m */; };
 		347425DF206C961100CF390E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 347425DE206C961100CF390E /* AppDelegate.m */; };
-		347425E2206C961100CF390E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 347425E1206C961100CF390E /* ViewController.m */; };
 		347425E5206C961100CF390E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347425E3206C961100CF390E /* Main.storyboard */; };
 		347425E7206C961100CF390E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347425E6206C961100CF390E /* Assets.xcassets */; };
 		347425EA206C961100CF390E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347425E8206C961100CF390E /* LaunchScreen.storyboard */; };
@@ -50,7 +52,6 @@
 		34B88CF8206E496B007DE454 /* TKNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88CF4206E496B007DE454 /* TKNewsModel.m */; };
 		34B88CF9206E496B007DE454 /* TKNewsSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88CF6206E496B007DE454 /* TKNewsSource.m */; };
 		34B88CFC206E4992007DE454 /* TKNewsDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88CFB206E4992007DE454 /* TKNewsDetailController.m */; };
-		34B88CFE206E5845007DE454 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 34B88CFD206E5845007DE454 /* test.html */; };
 		34B88D06206E85E2007DE454 /* QYPPBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88D01206E85E2007DE454 /* QYPPBarItem.m */; };
 		34B88D07206E85E2007DE454 /* QYPPTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88D03206E85E2007DE454 /* QYPPTabBar.m */; };
 		34B88D08206E85E2007DE454 /* QYPPTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B88D05206E85E2007DE454 /* QYPPTabBarController.m */; };
@@ -113,15 +114,19 @@
 		3400C4FD2072834B001B3AE9 /* TKTimeLineNewsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTimeLineNewsModel.m; sourceTree = "<group>"; };
 		3400C4FF20728799001B3AE9 /* TKTimeLineNewsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKTimeLineNewsCell.h; sourceTree = "<group>"; };
 		3400C50020728799001B3AE9 /* TKTimeLineNewsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKTimeLineNewsCell.m; sourceTree = "<group>"; };
-		3400C50420739658001B3AE9 /* TKMySpaceSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMySpaceSource.h; sourceTree = "<group>"; };
-		3400C50520739658001B3AE9 /* TKMySpaceSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMySpaceSource.m; sourceTree = "<group>"; };
-		3400C50720739711001B3AE9 /* TKMySpaceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMySpaceModel.h; sourceTree = "<group>"; };
-		3400C50820739711001B3AE9 /* TKMySpaceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMySpaceModel.m; sourceTree = "<group>"; };
+		3400C50D2073DCEA001B3AE9 /* TKMySpaceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKMySpaceModel.h; sourceTree = "<group>"; };
+		3400C50E2073DCEA001B3AE9 /* TKMySpaceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKMySpaceModel.m; sourceTree = "<group>"; };
+		3400C50F2073DCEA001B3AE9 /* TKMySpaceSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKMySpaceSource.h; sourceTree = "<group>"; };
+		3400C5102073DCEA001B3AE9 /* TKMySpaceSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKMySpaceSource.m; sourceTree = "<group>"; };
+		3400C5142073DEE0001B3AE9 /* TKMySpaceShareController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMySpaceShareController.h; sourceTree = "<group>"; };
+		3400C5152073DEE0001B3AE9 /* TKMySpaceShareController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMySpaceShareController.m; sourceTree = "<group>"; };
+		3400C5172073DF15001B3AE9 /* TKMySpaceAboutController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMySpaceAboutController.h; sourceTree = "<group>"; };
+		3400C5182073DF15001B3AE9 /* TKMySpaceAboutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMySpaceAboutController.m; sourceTree = "<group>"; };
+		3400C51E2073DFD4001B3AE9 /* TKLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKLoginController.h; sourceTree = "<group>"; };
+		3400C51F2073DFD4001B3AE9 /* TKLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKLoginController.m; sourceTree = "<group>"; };
 		347425DA206C961100CF390E /* TokenProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347425DD206C961100CF390E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		347425DE206C961100CF390E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		347425E0206C961100CF390E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		347425E1206C961100CF390E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		347425E4206C961100CF390E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		347425E6206C961100CF390E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		347425E9206C961100CF390E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -163,7 +168,6 @@
 		34B88CF6206E496B007DE454 /* TKNewsSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKNewsSource.m; sourceTree = "<group>"; };
 		34B88CFA206E4992007DE454 /* TKNewsDetailController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKNewsDetailController.h; sourceTree = "<group>"; };
 		34B88CFB206E4992007DE454 /* TKNewsDetailController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKNewsDetailController.m; sourceTree = "<group>"; };
-		34B88CFD206E5845007DE454 /* test.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		34B88D00206E85E2007DE454 /* QYPPBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYPPBarItem.h; sourceTree = "<group>"; };
 		34B88D01206E85E2007DE454 /* QYPPBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QYPPBarItem.m; sourceTree = "<group>"; };
 		34B88D02206E85E2007DE454 /* QYPPTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QYPPTabBar.h; sourceTree = "<group>"; };
@@ -260,12 +264,11 @@
 		3400C4EB20727712001B3AE9 /* myspace */ = {
 			isa = PBXGroup;
 			children = (
+				3400C51D2073DFD4001B3AE9 /* login */,
+				3400C5132073DEBD001B3AE9 /* second */,
+				3400C50C2073DCEA001B3AE9 /* main */,
 				3400C4F620727817001B3AE9 /* TKMySpaceController.h */,
 				3400C4F720727817001B3AE9 /* TKMySpaceController.m */,
-				3400C50420739658001B3AE9 /* TKMySpaceSource.h */,
-				3400C50520739658001B3AE9 /* TKMySpaceSource.m */,
-				3400C50720739711001B3AE9 /* TKMySpaceModel.h */,
-				3400C50820739711001B3AE9 /* TKMySpaceModel.m */,
 			);
 			path = myspace;
 			sourceTree = "<group>";
@@ -285,10 +288,40 @@
 			path = timeline;
 			sourceTree = "<group>";
 		};
+		3400C50C2073DCEA001B3AE9 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				3400C50D2073DCEA001B3AE9 /* TKMySpaceModel.h */,
+				3400C50E2073DCEA001B3AE9 /* TKMySpaceModel.m */,
+				3400C50F2073DCEA001B3AE9 /* TKMySpaceSource.h */,
+				3400C5102073DCEA001B3AE9 /* TKMySpaceSource.m */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		3400C5132073DEBD001B3AE9 /* second */ = {
+			isa = PBXGroup;
+			children = (
+				3400C5142073DEE0001B3AE9 /* TKMySpaceShareController.h */,
+				3400C5152073DEE0001B3AE9 /* TKMySpaceShareController.m */,
+				3400C5172073DF15001B3AE9 /* TKMySpaceAboutController.h */,
+				3400C5182073DF15001B3AE9 /* TKMySpaceAboutController.m */,
+			);
+			path = second;
+			sourceTree = "<group>";
+		};
+		3400C51D2073DFD4001B3AE9 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				3400C51E2073DFD4001B3AE9 /* TKLoginController.h */,
+				3400C51F2073DFD4001B3AE9 /* TKLoginController.m */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
 		347425D1206C961100CF390E = {
 			isa = PBXGroup;
 			children = (
-				34B88CFD206E5845007DE454 /* test.html */,
 				347425DC206C961100CF390E /* TokenProject */,
 				347425F5206C961200CF390E /* TokenProjectTests */,
 				34742600206C961200CF390E /* TokenProjectUITests */,
@@ -318,8 +351,6 @@
 				3400C4EC20727712001B3AE9 /* timeline */,
 				347425DD206C961100CF390E /* AppDelegate.h */,
 				347425DE206C961100CF390E /* AppDelegate.m */,
-				347425E0206C961100CF390E /* ViewController.h */,
-				347425E1206C961100CF390E /* ViewController.m */,
 				347425E3206C961100CF390E /* Main.storyboard */,
 				347425E6206C961100CF390E /* Assets.xcassets */,
 				347425E8206C961100CF390E /* LaunchScreen.storyboard */,
@@ -621,7 +652,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34B88CFE206E5845007DE454 /* test.html in Resources */,
 				347425EA206C961100CF390E /* LaunchScreen.storyboard in Resources */,
 				347425E7206C961100CF390E /* Assets.xcassets in Resources */,
 				347425E5206C961100CF390E /* Main.storyboard in Resources */,
@@ -710,23 +740,24 @@
 				3400C4DE2071F5DF001B3AE9 /* TKMarketsDetailMarketCell.m in Sources */,
 				34B88C9D206D35CD007DE454 /* QYPPCollectionView.m in Sources */,
 				3400C4CC20714C3A001B3AE9 /* TKMarketsListController.m in Sources */,
+				3400C5162073DEE0001B3AE9 /* TKMySpaceShareController.m in Sources */,
 				3400C4DB2071F2F2001B3AE9 /* TKMarketsDetailMarketListSource.m in Sources */,
 				34B88C8C206D35CD007DE454 /* TKModel.m in Sources */,
-				3400C50920739711001B3AE9 /* TKMySpaceModel.m in Sources */,
 				34B88D07206E85E2007DE454 /* QYPPTabBar.m in Sources */,
 				34B88CA2206D35CD007DE454 /* QYPPTableViewSource.m in Sources */,
 				34B88CF9206E496B007DE454 /* TKNewsSource.m in Sources */,
 				3400C4CB20714C3A001B3AE9 /* TKMarketsCell.m in Sources */,
+				3400C5202073DFD4001B3AE9 /* TKLoginController.m in Sources */,
 				34B88D0F206E921C007DE454 /* TKBaseAPI.m in Sources */,
 				34B88CF8206E496B007DE454 /* TKNewsModel.m in Sources */,
 				3400C4CD20714C3A001B3AE9 /* TKMarketsModel.m in Sources */,
 				34742616206C972700CF390E /* TKNewsMainController.m in Sources */,
 				34B88C9E206D35CD007DE454 /* QYPPCollectionViewSource.m in Sources */,
 				3400C50120728799001B3AE9 /* TKTimeLineNewsCell.m in Sources */,
-				3400C50620739658001B3AE9 /* TKMySpaceSource.m in Sources */,
+				3400C5122073DCEB001B3AE9 /* TKMySpaceSource.m in Sources */,
 				3400C4D520714CD7001B3AE9 /* TKMarketsDetailListController.m in Sources */,
 				3400C4FE2072834B001B3AE9 /* TKTimeLineNewsModel.m in Sources */,
-				347425E2206C961100CF390E /* ViewController.m in Sources */,
+				3400C5112073DCEB001B3AE9 /* TKMySpaceModel.m in Sources */,
 				34B88C9C206D35CD007DE454 /* TKRequest.m in Sources */,
 				34B88CA0206D35CD007DE454 /* QYPPListViewSource.m in Sources */,
 				347425ED206C961100CF390E /* main.m in Sources */,
@@ -745,6 +776,7 @@
 				3400C4CE20714C3A001B3AE9 /* TKMarketsSource.m in Sources */,
 				34B88D06206E85E2007DE454 /* QYPPBarItem.m in Sources */,
 				34B88CF7206E496B007DE454 /* TKNewsCell.m in Sources */,
+				3400C5192073DF15001B3AE9 /* TKMySpaceAboutController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -30,6 +30,7 @@ NSARRAY_OBJECT_STRONG_OPTIONAL(TKMarketsFeedModel) * list;
 NSSTRING_STRONG_OPTIONAL * smart_group_type;
 NSSTRING_STRONG_OPTIONAL * smart_group_name;
 NSSTRING_STRONG_OPTIONAL * name;
+NSSTRING_STRONG_OPTIONAL * unique_ids;
 NSSTRING_STRONG_OPTIONAL * c_id;
 NSSTRING_STRONG_OPTIONAL * group_type;
 NSSTRING_STRONG_OPTIONAL * smart_group_id;
@@ -62,5 +63,12 @@ NSSTRING_STRONG_OPTIONAL * website;
 NSSTRING_STRONG_OPTIONAL * twitter;
 NSSTRING_STRONG_OPTIONAL * twitter_name;
 NSSTRING_STRONG_OPTIONAL * flag;
+
+@end
+
+@interface TKMarketsViewModel : TKModel
+
+//0=价格不变，1=价格涨，2=价格跌
+@property (nonatomic, assign) NSInteger priceState;
 
 @end

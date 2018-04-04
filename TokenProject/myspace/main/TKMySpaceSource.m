@@ -48,11 +48,7 @@
     about.title = @"关于 TokenTimer";
     about.viewModel = vm1;
     
-    TKMySpaceModel *feedback = [TKMySpaceModel new];
-    feedback.title = @"意见反馈";
-    feedback.viewModel = vm1;
-    
-    NSArray *section2 = @[share,about,feedback];
+    NSArray *section2 = @[share,about];
     
     TKMySpaceModel *clearcache = [TKMySpaceModel new];
     clearcache.title = @"清除缓存";
@@ -80,6 +76,7 @@
     TKMySpaceModel *item = [self itemDataForIndexPath:indexPath];
     cell.textLabel.text = item.title;
     cell.detailTextLabel.text = item.detail;
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
 - (CGFloat)cellHeightAtIndexPath:(NSIndexPath *)indexPath

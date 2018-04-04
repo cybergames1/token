@@ -7,6 +7,9 @@
 //
 
 #import "TKMySpaceController.h"
+#import "TKLoginController.h"
+#import "TKMySpaceShareController.h"
+#import "TKMySpaceAboutController.h"
 
 @interface TKMySpaceController ()
 
@@ -30,6 +33,24 @@
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 22)];
     view.backgroundColor = self.view.backgroundColor;
     return view;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0 && indexPath.row == 0) {
+        //登录
+        TKLoginController *controller = [TKLoginController new];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
+        [self presentViewController:nav animated:YES completion:nil];
+    }else if (indexPath.section == 1 && indexPath.row == 0) {
+        //推荐APP
+    }else if (indexPath.section == 1&& indexPath.row == 1) {
+        //关于
+    }else if (indexPath.section == 2 && indexPath.row == 0) {
+        //清除缓存
+    }else {
+        //其他
+    }
 }
 
 @end

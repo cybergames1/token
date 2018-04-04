@@ -72,5 +72,25 @@
     [self addSubview:line_];
 }
 
+- (void)setPriceState:(TKMarketsPriceState)priceState
+{
+    if (_priceState == priceState) return;
+    _priceState = priceState;
+    
+    if (priceState == TKMarketsPriceStateUp) {
+        self.priceLabel.textColor = UIColorFromRGB(0x51a938);
+    }else if (priceState == TKMarketsPriceStateDown) {
+        self.priceLabel.textColor = UIColorFromRGB(0xbf2828);
+    }else {
+        //
+    }
+    
+    @weakify(self);
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        @strongify(self);
+        self.priceLabel.textColor = [UIColor blackColor];
+    });
+}
+
 
 @end

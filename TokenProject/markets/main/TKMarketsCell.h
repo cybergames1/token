@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, TKMarketsPriceState) {
+    TKMarketsPriceStateNormal = 0, //价格没变
+    TKMarketsPriceStateUp = 1, //价格涨了
+    TKMarketsPriceStateDown = 2, //价格跌了
+};
+
 @interface TKMarketsCell : UITableViewCell
 
 @property (nonatomic, strong) UILabel * titleLabel;
@@ -17,5 +23,7 @@
 @property (nonatomic, strong) UILabel * priceLabel;
 @property (nonatomic, strong) UILabel * cnyPriceLabel;
 @property (nonatomic, strong) UILabel * percentLabel;
+
+@property (nonatomic, assign) TKMarketsPriceState priceState;
 
 @end
