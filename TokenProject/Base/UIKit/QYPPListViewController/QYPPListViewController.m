@@ -162,7 +162,6 @@
         self.tableView.backgroundColor = [UIColor clearColor];
         self.tableView.delegate = self;
         self.tableView.bounces = YES;
-        self.tableView.hidden = YES;
         [self.view addSubview:self.tableView];
     }
     

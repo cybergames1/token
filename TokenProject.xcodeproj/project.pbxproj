@@ -31,6 +31,7 @@
 		3400C5162073DEE0001B3AE9 /* TKMySpaceShareController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C5152073DEE0001B3AE9 /* TKMySpaceShareController.m */; };
 		3400C5192073DF15001B3AE9 /* TKMySpaceAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C5182073DF15001B3AE9 /* TKMySpaceAboutController.m */; };
 		3400C5202073DFD4001B3AE9 /* TKLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C51F2073DFD4001B3AE9 /* TKLoginController.m */; };
+		3400C5272074B9AF001B3AE9 /* TKImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3400C5262074B9AF001B3AE9 /* TKImages.xcassets */; };
 		347425DF206C961100CF390E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 347425DE206C961100CF390E /* AppDelegate.m */; };
 		347425E5206C961100CF390E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347425E3206C961100CF390E /* Main.storyboard */; };
 		347425E7206C961100CF390E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347425E6206C961100CF390E /* Assets.xcassets */; };
@@ -124,6 +125,7 @@
 		3400C5182073DF15001B3AE9 /* TKMySpaceAboutController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMySpaceAboutController.m; sourceTree = "<group>"; };
 		3400C51E2073DFD4001B3AE9 /* TKLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKLoginController.h; sourceTree = "<group>"; };
 		3400C51F2073DFD4001B3AE9 /* TKLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKLoginController.m; sourceTree = "<group>"; };
+		3400C5262074B9AF001B3AE9 /* TKImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TKImages.xcassets; sourceTree = "<group>"; };
 		347425DA206C961100CF390E /* TokenProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347425DD206C961100CF390E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		347425DE206C961100CF390E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 				347425EB206C961100CF390E /* Info.plist */,
 				347425EC206C961100CF390E /* main.m */,
 				34B88CE6206D44F6007DE454 /* TokenProjectPrefixHeader.pch */,
+				3400C5262074B9AF001B3AE9 /* TKImages.xcassets */,
 			);
 			path = TokenProject;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 			files = (
 				347425EA206C961100CF390E /* LaunchScreen.storyboard in Resources */,
 				347425E7206C961100CF390E /* Assets.xcassets in Resources */,
+				3400C5272074B9AF001B3AE9 /* TKImages.xcassets in Resources */,
 				347425E5206C961100CF390E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

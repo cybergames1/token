@@ -44,8 +44,7 @@
 {
     self.navigationController.navigationBar.backgroundColor = self.view.backgroundColor;
     UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
-    [back setTitle:@"返回" forState:UIControlStateNormal];
-    [back setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [back setImage:[UIImage imageNamed:@"nav_back"] forState:UIControlStateNormal];
     [back addTarget:self action:@selector(p_goback) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:back];
     self.navigationItem.leftBarButtonItem = item;
@@ -53,7 +52,7 @@
 
 - (void)setupView
 {
-    UILabel *titleLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(0, 25, self.view.width, 13)];
+    UILabel *titleLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(0, 55, self.view.width, 13)];
     titleLabel_.textColor = UIColorFromRGB(0x666666);
     titleLabel_.font = [UIFont systemFontOfSize:12];
     titleLabel_.textAlignment = NSTextAlignmentCenter;

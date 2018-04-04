@@ -77,6 +77,7 @@
     cell.textLabel.text = item.title;
     cell.detailTextLabel.text = item.detail;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleDefault;
 }
 
 - (CGFloat)cellHeightAtIndexPath:(NSIndexPath *)indexPath

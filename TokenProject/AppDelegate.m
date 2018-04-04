@@ -21,6 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setNavigationBarStyle];
     [self loadTabController];
     return YES;
 }
@@ -60,24 +61,41 @@
     TKMarketsMainController *market = [TKMarketsMainController new];
     UINavigationController *marketNav = [[UINavigationController alloc] initWithRootViewController:market];
     marketNav.tabBarItem.title = @"行情";
+    marketNav.tabBarItem.image = [UIImage imageNamed:@"tab_market"];
     
     TKTimeLineNewsController *timeline = [TKTimeLineNewsController new];
     UINavigationController *timelineNav = [[UINavigationController alloc] initWithRootViewController:timeline];
     timelineNav.tabBarItem.title = @"快讯";
+    timelineNav.tabBarItem.image = [UIImage imageNamed:@"tab_timelinenews"];
     
     TKNewsMainController *news = [TKNewsMainController new];
     UINavigationController *newsNav = [[UINavigationController alloc] initWithRootViewController:news];
     newsNav.tabBarItem.title = @"资讯";
+    newsNav.tabBarItem.image = [UIImage imageNamed:@"tab_news"];
     
     TKMySpaceController *my = [TKMySpaceController new];
     UINavigationController *myNav = [[UINavigationController alloc] initWithRootViewController:my];
     myNav.tabBarItem.title = @"我的";
+    myNav.tabBarItem.image = [UIImage imageNamed:@"tab_my"];
     
     UITabBarController *tab = [UITabBarController new];
     tab.viewControllers = @[marketNav,timelineNav,newsNav,myNav];
     
     self.window.rootViewController = tab;
     [self.window makeKeyAndVisible];
+}
+
+- (void)setNavigationBarStyle
+{
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    CGFloat version = [[[UIDevice currentDevice] systemVersion] floatValue];
+    if (version >= 11.0) {
+        [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200, 0)
+                                                             forBarMetrics:UIBarMetricsDefault];
+    }else {
+        [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
+                                                             forBarMetrics:UIBarMetricsDefault];
+    }
 }
 
 
