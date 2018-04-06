@@ -57,6 +57,7 @@ NSSTRING_STRONG_OPTIONAL * price_display;
 NSSTRING_STRONG_OPTIONAL * price_display_cny;
 NSSTRING_STRONG_OPTIONAL * percent_change_display;
 NSNUMBER_STRONG_OPTIONAL * is_favorite;
+NSSTRING_STRONG_OPTIONAL * market_cap_usd;
 
 NSSTRING_STRONG_OPTIONAL * cmc_url;
 NSSTRING_STRONG_OPTIONAL * website;

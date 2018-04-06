@@ -23,7 +23,7 @@
 
 - (void)setupView
 {
-    UILabel *titleLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(14, 8, 161, 12)];
+    UILabel *titleLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(14, 8, 180, 12)];
     titleLabel_.font = [UIFont systemFontOfSize:12];
     titleLabel_.textColor = UIColorFromRGB(0xcbcbcb);
     self.titleLabel = titleLabel_;

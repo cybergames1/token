@@ -8,7 +8,7 @@
 
 #import "TKLoginController.h"
 
-@interface TKLoginController () <UITextFieldDelegate>
+@interface TKLoginController ()
 {
     NSInteger _time;
 }
@@ -44,7 +44,9 @@
 {
     self.navigationController.navigationBar.backgroundColor = self.view.backgroundColor;
     UIButton *back = [UIButton buttonWithType:UIButtonTypeCustom];
+    [back setFrame:CGRectMake(0, 0, 50, 44)];
     [back setImage:[UIImage imageNamed:@"nav_back"] forState:UIControlStateNormal];
+    [back setImageEdgeInsets:UIEdgeInsetsMake(0, -40, 0, 0)];
     [back addTarget:self action:@selector(p_goback) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:back];
     self.navigationItem.leftBarButtonItem = item;
@@ -63,7 +65,6 @@
     phoneTextField_.placeholder = @"手机号";
     phoneTextField_.keyboardType = UIKeyboardTypeNumberPad;
     phoneTextField_.clearButtonMode = UITextFieldViewModeWhileEditing;
-    phoneTextField_.delegate = self;
     self.phoneTextField = phoneTextField_;
     
     UIView *line1_ = [[UIView alloc] initWithFrame:CGRectMake(phoneTextField_.left, phoneTextField_.bottom, 304, 1)];
@@ -75,7 +76,6 @@
     codeTextField_.keyboardType = UIKeyboardTypeNumberPad;
     codeTextField_.clearButtonMode = UITextFieldViewModeWhileEditing;
     codeTextField_.rightViewMode = UITextFieldViewModeAlways;
-    codeTextField_.delegate = self;
     self.codeTextField = codeTextField_;
     
     UIView *line2_ = [[UIView alloc] initWithFrame:CGRectMake(codeTextField_.left, codeTextField_.bottom, 304, 1)];
@@ -123,26 +123,6 @@
 {
     UITextField *textField = notification.object;
     NSLog(@"text end:%@",textField.text);
-}
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
-{
-    NSLog(@"text:%@",textField.text);
-}
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    NSLog(@"text1:%@\ttext2:%@\ttext:%@",_phoneTextField.text,_codeTextField.text,textField.text);
-    return YES;
-}
-
-- (BOOL)textFieldShouldClear:(UITextField *)textField
-{
-    return YES;
-}
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    return YES;
 }
 
 //获取验证码点击事件

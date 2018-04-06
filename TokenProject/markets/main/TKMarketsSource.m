@@ -198,7 +198,12 @@
 - (NSString *)p_title:(TKMarketsFeedModel *)itemModel
 {
     NSString *alias = (itemModel.alias && [itemModel.alias length] > 0) ? itemModel.alias : itemModel.name;
-    return [NSString stringWithFormat:@"%@,%@",itemModel.market_name,alias];
+    NSString *rank = [NSString stringWithFormat:@"市值 #%@ $%@",itemModel.rank,[TKBaseAPI formatNumber:[itemModel.market_cap_usd integerValue]]];
+    if ([itemModel.market_id isEqualToString:@"1303"]) {
+        return rank;
+    }else {
+        return [NSString stringWithFormat:@"%@,%@",itemModel.market_name,alias];
+    }
 }
 - (NSString *)p_amount:(TKMarketsFeedModel *)itemModel
 {

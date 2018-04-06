@@ -32,7 +32,28 @@
 		3400C5192073DF15001B3AE9 /* TKMySpaceAboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C5182073DF15001B3AE9 /* TKMySpaceAboutController.m */; };
 		3400C5202073DFD4001B3AE9 /* TKLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C51F2073DFD4001B3AE9 /* TKLoginController.m */; };
 		3400C5272074B9AF001B3AE9 /* TKImages.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3400C5262074B9AF001B3AE9 /* TKImages.xcassets */; };
-		3400C52D2074FFE8001B3AE9 /* TKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C52C2074FFE8001B3AE9 /* TKCache.m */; };
+		3400C57920776FDA001B3AE9 /* TKCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C53120776FDA001B3AE9 /* TKCache.m */; };
+		3400C57A20776FDA001B3AE9 /* UIColor+YYStockTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C53820776FDA001B3AE9 /* UIColor+YYStockTheme.m */; };
+		3400C57B20776FDA001B3AE9 /* YYStockVariable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C53B20776FDA001B3AE9 /* YYStockVariable.m */; };
+		3400C57C20776FDA001B3AE9 /* YYTopBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C53F20776FDA001B3AE9 /* YYTopBarView.m */; };
+		3400C57D20776FDA001B3AE9 /* YYLinePositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C54820776FDA001B3AE9 /* YYLinePositionModel.m */; };
+		3400C57E20776FDA001B3AE9 /* YYVolumePositionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C54B20776FDA001B3AE9 /* YYVolumePositionModel.m */; };
+		3400C57F20776FDA001B3AE9 /* YYKline.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C55120776FDA001B3AE9 /* YYKline.m */; };
+		3400C58020776FDA001B3AE9 /* MAline.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C55420776FDA001B3AE9 /* MAline.m */; };
+		3400C58120776FDA001B3AE9 /* YYKlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C55620776FDA001B3AE9 /* YYKlineView.m */; };
+		3400C58220776FDA001B3AE9 /* YYKlineMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C55920776FDA001B3AE9 /* YYKlineMaskView.m */; };
+		3400C58320776FDA001B3AE9 /* YYKlineVolumeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C55C20776FDA001B3AE9 /* YYKlineVolumeView.m */; };
+		3400C58420776FDA001B3AE9 /* YYStockViewMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C55F20776FDA001B3AE9 /* YYStockViewMaskView.m */; };
+		3400C58520776FDA001B3AE9 /* YYStockScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C56220776FDA001B3AE9 /* YYStockScrollView.m */; };
+		3400C58620776FDA001B3AE9 /* YYFiveRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C56620776FDA001B3AE9 /* YYFiveRecordTableViewCell.m */; };
+		3400C58720776FDA001B3AE9 /* YYFiveRecordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3400C56720776FDA001B3AE9 /* YYFiveRecordTableViewCell.xib */; };
+		3400C58820776FDA001B3AE9 /* YYFiveRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C56920776FDA001B3AE9 /* YYFiveRecordView.m */; };
+		3400C58920776FDA001B3AE9 /* YYTimeLineMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C56C20776FDA001B3AE9 /* YYTimeLineMaskView.m */; };
+		3400C58A20776FDA001B3AE9 /* YYTimeLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C56F20776FDA001B3AE9 /* YYTimeLineView.m */; };
+		3400C58B20776FDA001B3AE9 /* YYTimeLineVolumeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C57220776FDA001B3AE9 /* YYTimeLineVolumeView.m */; };
+		3400C58C20776FDA001B3AE9 /* YYStockView_Kline.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C57420776FDA001B3AE9 /* YYStockView_Kline.m */; };
+		3400C58D20776FDA001B3AE9 /* YYStockView_TimeLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C57620776FDA001B3AE9 /* YYStockView_TimeLine.m */; };
+		3400C58E20776FDA001B3AE9 /* YYStock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C57820776FDA001B3AE9 /* YYStock.m */; };
 		347425DF206C961100CF390E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 347425DE206C961100CF390E /* AppDelegate.m */; };
 		347425E5206C961100CF390E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347425E3206C961100CF390E /* Main.storyboard */; };
 		347425E7206C961100CF390E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347425E6206C961100CF390E /* Assets.xcassets */; };
@@ -127,8 +148,53 @@
 		3400C51E2073DFD4001B3AE9 /* TKLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKLoginController.h; sourceTree = "<group>"; };
 		3400C51F2073DFD4001B3AE9 /* TKLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKLoginController.m; sourceTree = "<group>"; };
 		3400C5262074B9AF001B3AE9 /* TKImages.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TKImages.xcassets; sourceTree = "<group>"; };
-		3400C52B2074FFE8001B3AE9 /* TKCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKCache.h; sourceTree = "<group>"; };
-		3400C52C2074FFE8001B3AE9 /* TKCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKCache.m; sourceTree = "<group>"; };
+		3400C53020776FDA001B3AE9 /* TKCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKCache.h; sourceTree = "<group>"; };
+		3400C53120776FDA001B3AE9 /* TKCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKCache.m; sourceTree = "<group>"; };
+		3400C53520776FDA001B3AE9 /* YYStockConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYStockConstant.h; sourceTree = "<group>"; };
+		3400C53720776FDA001B3AE9 /* UIColor+YYStockTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YYStockTheme.h"; sourceTree = "<group>"; };
+		3400C53820776FDA001B3AE9 /* UIColor+YYStockTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+YYStockTheme.m"; sourceTree = "<group>"; };
+		3400C53A20776FDA001B3AE9 /* YYStockVariable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYStockVariable.h; sourceTree = "<group>"; };
+		3400C53B20776FDA001B3AE9 /* YYStockVariable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYStockVariable.m; sourceTree = "<group>"; };
+		3400C53E20776FDA001B3AE9 /* YYTopBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTopBarView.h; sourceTree = "<group>"; };
+		3400C53F20776FDA001B3AE9 /* YYTopBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTopBarView.m; sourceTree = "<group>"; };
+		3400C54320776FDA001B3AE9 /* YYStockDataProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYStockDataProtocol.h; sourceTree = "<group>"; };
+		3400C54420776FDA001B3AE9 /* YYStockFiveRecordProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYStockFiveRecordProtocol.h; sourceTree = "<group>"; };
+		3400C54520776FDA001B3AE9 /* YYStockTimeLineProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYStockTimeLineProtocol.h; sourceTree = "<group>"; };
+		3400C54720776FDA001B3AE9 /* YYLinePositionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYLinePositionModel.h; sourceTree = "<group>"; };
+		3400C54820776FDA001B3AE9 /* YYLinePositionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYLinePositionModel.m; sourceTree = "<group>"; };
+		3400C54A20776FDA001B3AE9 /* YYVolumePositionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYVolumePositionModel.h; sourceTree = "<group>"; };
+		3400C54B20776FDA001B3AE9 /* YYVolumePositionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYVolumePositionModel.m; sourceTree = "<group>"; };
+		3400C55020776FDA001B3AE9 /* YYKline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKline.h; sourceTree = "<group>"; };
+		3400C55120776FDA001B3AE9 /* YYKline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKline.m; sourceTree = "<group>"; };
+		3400C55320776FDA001B3AE9 /* MAline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAline.h; sourceTree = "<group>"; };
+		3400C55420776FDA001B3AE9 /* MAline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAline.m; sourceTree = "<group>"; };
+		3400C55520776FDA001B3AE9 /* YYKlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKlineView.h; sourceTree = "<group>"; };
+		3400C55620776FDA001B3AE9 /* YYKlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKlineView.m; sourceTree = "<group>"; };
+		3400C55820776FDA001B3AE9 /* YYKlineMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKlineMaskView.h; sourceTree = "<group>"; };
+		3400C55920776FDA001B3AE9 /* YYKlineMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKlineMaskView.m; sourceTree = "<group>"; };
+		3400C55B20776FDA001B3AE9 /* YYKlineVolumeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYKlineVolumeView.h; sourceTree = "<group>"; };
+		3400C55C20776FDA001B3AE9 /* YYKlineVolumeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYKlineVolumeView.m; sourceTree = "<group>"; };
+		3400C55E20776FDA001B3AE9 /* YYStockViewMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYStockViewMaskView.h; sourceTree = "<group>"; };
+		3400C55F20776FDA001B3AE9 /* YYStockViewMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYStockViewMaskView.m; sourceTree = "<group>"; };
+		3400C56120776FDA001B3AE9 /* YYStockScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYStockScrollView.h; sourceTree = "<group>"; };
+		3400C56220776FDA001B3AE9 /* YYStockScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYStockScrollView.m; sourceTree = "<group>"; };
+		3400C56520776FDA001B3AE9 /* YYFiveRecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFiveRecordTableViewCell.h; sourceTree = "<group>"; };
+		3400C56620776FDA001B3AE9 /* YYFiveRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFiveRecordTableViewCell.m; sourceTree = "<group>"; };
+		3400C56720776FDA001B3AE9 /* YYFiveRecordTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYFiveRecordTableViewCell.xib; sourceTree = "<group>"; };
+		3400C56820776FDA001B3AE9 /* YYFiveRecordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFiveRecordView.h; sourceTree = "<group>"; };
+		3400C56920776FDA001B3AE9 /* YYFiveRecordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYFiveRecordView.m; sourceTree = "<group>"; };
+		3400C56B20776FDA001B3AE9 /* YYTimeLineMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTimeLineMaskView.h; sourceTree = "<group>"; };
+		3400C56C20776FDA001B3AE9 /* YYTimeLineMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTimeLineMaskView.m; sourceTree = "<group>"; };
+		3400C56E20776FDA001B3AE9 /* YYTimeLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTimeLineView.h; sourceTree = "<group>"; };
+		3400C56F20776FDA001B3AE9 /* YYTimeLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTimeLineView.m; sourceTree = "<group>"; };
+		3400C57120776FDA001B3AE9 /* YYTimeLineVolumeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYTimeLineVolumeView.h; sourceTree = "<group>"; };
+		3400C57220776FDA001B3AE9 /* YYTimeLineVolumeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYTimeLineVolumeView.m; sourceTree = "<group>"; };
+		3400C57320776FDA001B3AE9 /* YYStockView_Kline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYStockView_Kline.h; sourceTree = "<group>"; };
+		3400C57420776FDA001B3AE9 /* YYStockView_Kline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYStockView_Kline.m; sourceTree = "<group>"; };
+		3400C57520776FDA001B3AE9 /* YYStockView_TimeLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYStockView_TimeLine.h; sourceTree = "<group>"; };
+		3400C57620776FDA001B3AE9 /* YYStockView_TimeLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYStockView_TimeLine.m; sourceTree = "<group>"; };
+		3400C57720776FDA001B3AE9 /* YYStock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYStock.h; sourceTree = "<group>"; };
+		3400C57820776FDA001B3AE9 /* YYStock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYStock.m; sourceTree = "<group>"; };
 		347425DA206C961100CF390E /* TokenProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347425DD206C961100CF390E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		347425DE206C961100CF390E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -324,13 +390,274 @@
 			path = login;
 			sourceTree = "<group>";
 		};
-		3400C52A2074FFD5001B3AE9 /* cache */ = {
+		3400C52E20776FDA001B3AE9 /* private */ = {
 			isa = PBXGroup;
 			children = (
-				3400C52B2074FFE8001B3AE9 /* TKCache.h */,
-				3400C52C2074FFE8001B3AE9 /* TKCache.m */,
+				3400C52F20776FDA001B3AE9 /* cache */,
+				3400C53220776FDA001B3AE9 /* YYStock */,
+			);
+			path = private;
+			sourceTree = "<group>";
+		};
+		3400C52F20776FDA001B3AE9 /* cache */ = {
+			isa = PBXGroup;
+			children = (
+				3400C53020776FDA001B3AE9 /* TKCache.h */,
+				3400C53120776FDA001B3AE9 /* TKCache.m */,
 			);
 			path = cache;
+			sourceTree = "<group>";
+		};
+		3400C53220776FDA001B3AE9 /* YYStock */ = {
+			isa = PBXGroup;
+			children = (
+				3400C53320776FDA001B3AE9 /* Config[主题+定义] */,
+				3400C53C20776FDA001B3AE9 /* Packages */,
+				3400C54020776FDA001B3AE9 /* Stock */,
+			);
+			path = YYStock;
+			sourceTree = "<group>";
+		};
+		3400C53320776FDA001B3AE9 /* Config[主题+定义] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C53420776FDA001B3AE9 /* Constant[常量定义] */,
+				3400C53620776FDA001B3AE9 /* Theme[主题] */,
+				3400C53920776FDA001B3AE9 /* Variable[变量] */,
+			);
+			path = "Config[主题+定义]";
+			sourceTree = "<group>";
+		};
+		3400C53420776FDA001B3AE9 /* Constant[常量定义] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C53520776FDA001B3AE9 /* YYStockConstant.h */,
+			);
+			path = "Constant[常量定义]";
+			sourceTree = "<group>";
+		};
+		3400C53620776FDA001B3AE9 /* Theme[主题] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C53720776FDA001B3AE9 /* UIColor+YYStockTheme.h */,
+				3400C53820776FDA001B3AE9 /* UIColor+YYStockTheme.m */,
+			);
+			path = "Theme[主题]";
+			sourceTree = "<group>";
+		};
+		3400C53920776FDA001B3AE9 /* Variable[变量] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C53A20776FDA001B3AE9 /* YYStockVariable.h */,
+				3400C53B20776FDA001B3AE9 /* YYStockVariable.m */,
+			);
+			path = "Variable[变量]";
+			sourceTree = "<group>";
+		};
+		3400C53C20776FDA001B3AE9 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				3400C53D20776FDA001B3AE9 /* YYTopBar */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
+		3400C53D20776FDA001B3AE9 /* YYTopBar */ = {
+			isa = PBXGroup;
+			children = (
+				3400C53E20776FDA001B3AE9 /* YYTopBarView.h */,
+				3400C53F20776FDA001B3AE9 /* YYTopBarView.m */,
+			);
+			path = YYTopBar;
+			sourceTree = "<group>";
+		};
+		3400C54020776FDA001B3AE9 /* Stock */ = {
+			isa = PBXGroup;
+			children = (
+				3400C54120776FDA001B3AE9 /* StockModel */,
+				3400C54C20776FDA001B3AE9 /* StockView */,
+				3400C57720776FDA001B3AE9 /* YYStock.h */,
+				3400C57820776FDA001B3AE9 /* YYStock.m */,
+			);
+			path = Stock;
+			sourceTree = "<group>";
+		};
+		3400C54120776FDA001B3AE9 /* StockModel */ = {
+			isa = PBXGroup;
+			children = (
+				3400C54220776FDA001B3AE9 /* StockDataProtocol */,
+				3400C54620776FDA001B3AE9 /* StockLinePositionModel */,
+				3400C54920776FDA001B3AE9 /* StockVolumePositionModel */,
+			);
+			path = StockModel;
+			sourceTree = "<group>";
+		};
+		3400C54220776FDA001B3AE9 /* StockDataProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				3400C54320776FDA001B3AE9 /* YYStockDataProtocol.h */,
+				3400C54420776FDA001B3AE9 /* YYStockFiveRecordProtocol.h */,
+				3400C54520776FDA001B3AE9 /* YYStockTimeLineProtocol.h */,
+			);
+			path = StockDataProtocol;
+			sourceTree = "<group>";
+		};
+		3400C54620776FDA001B3AE9 /* StockLinePositionModel */ = {
+			isa = PBXGroup;
+			children = (
+				3400C54720776FDA001B3AE9 /* YYLinePositionModel.h */,
+				3400C54820776FDA001B3AE9 /* YYLinePositionModel.m */,
+			);
+			path = StockLinePositionModel;
+			sourceTree = "<group>";
+		};
+		3400C54920776FDA001B3AE9 /* StockVolumePositionModel */ = {
+			isa = PBXGroup;
+			children = (
+				3400C54A20776FDA001B3AE9 /* YYVolumePositionModel.h */,
+				3400C54B20776FDA001B3AE9 /* YYVolumePositionModel.m */,
+			);
+			path = StockVolumePositionModel;
+			sourceTree = "<group>";
+		};
+		3400C54C20776FDA001B3AE9 /* StockView */ = {
+			isa = PBXGroup;
+			children = (
+				3400C54D20776FDA001B3AE9 /* LineView[K线图] */,
+				3400C55D20776FDA001B3AE9 /* MaskView[TopBar遮罩] */,
+				3400C56020776FDA001B3AE9 /* StockScrollview[画背景线] */,
+				3400C56320776FDA001B3AE9 /* TimeLine[分时图] */,
+				3400C57320776FDA001B3AE9 /* YYStockView_Kline.h */,
+				3400C57420776FDA001B3AE9 /* YYStockView_Kline.m */,
+				3400C57520776FDA001B3AE9 /* YYStockView_TimeLine.h */,
+				3400C57620776FDA001B3AE9 /* YYStockView_TimeLine.m */,
+			);
+			path = StockView;
+			sourceTree = "<group>";
+		};
+		3400C54D20776FDA001B3AE9 /* LineView[K线图] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C54E20776FDA001B3AE9 /* KlineView[K线上部分] */,
+				3400C55720776FDA001B3AE9 /* MaskView[遮罩] */,
+				3400C55A20776FDA001B3AE9 /* VolumeView[成交量] */,
+			);
+			path = "LineView[K线图]";
+			sourceTree = "<group>";
+		};
+		3400C54E20776FDA001B3AE9 /* KlineView[K线上部分] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C54F20776FDA001B3AE9 /* Kline */,
+				3400C55220776FDA001B3AE9 /* MAline */,
+				3400C55520776FDA001B3AE9 /* YYKlineView.h */,
+				3400C55620776FDA001B3AE9 /* YYKlineView.m */,
+			);
+			path = "KlineView[K线上部分]";
+			sourceTree = "<group>";
+		};
+		3400C54F20776FDA001B3AE9 /* Kline */ = {
+			isa = PBXGroup;
+			children = (
+				3400C55020776FDA001B3AE9 /* YYKline.h */,
+				3400C55120776FDA001B3AE9 /* YYKline.m */,
+			);
+			path = Kline;
+			sourceTree = "<group>";
+		};
+		3400C55220776FDA001B3AE9 /* MAline */ = {
+			isa = PBXGroup;
+			children = (
+				3400C55320776FDA001B3AE9 /* MAline.h */,
+				3400C55420776FDA001B3AE9 /* MAline.m */,
+			);
+			path = MAline;
+			sourceTree = "<group>";
+		};
+		3400C55720776FDA001B3AE9 /* MaskView[遮罩] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C55820776FDA001B3AE9 /* YYKlineMaskView.h */,
+				3400C55920776FDA001B3AE9 /* YYKlineMaskView.m */,
+			);
+			path = "MaskView[遮罩]";
+			sourceTree = "<group>";
+		};
+		3400C55A20776FDA001B3AE9 /* VolumeView[成交量] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C55B20776FDA001B3AE9 /* YYKlineVolumeView.h */,
+				3400C55C20776FDA001B3AE9 /* YYKlineVolumeView.m */,
+			);
+			path = "VolumeView[成交量]";
+			sourceTree = "<group>";
+		};
+		3400C55D20776FDA001B3AE9 /* MaskView[TopBar遮罩] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C55E20776FDA001B3AE9 /* YYStockViewMaskView.h */,
+				3400C55F20776FDA001B3AE9 /* YYStockViewMaskView.m */,
+			);
+			path = "MaskView[TopBar遮罩]";
+			sourceTree = "<group>";
+		};
+		3400C56020776FDA001B3AE9 /* StockScrollview[画背景线] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C56120776FDA001B3AE9 /* YYStockScrollView.h */,
+				3400C56220776FDA001B3AE9 /* YYStockScrollView.m */,
+			);
+			path = "StockScrollview[画背景线]";
+			sourceTree = "<group>";
+		};
+		3400C56320776FDA001B3AE9 /* TimeLine[分时图] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C56420776FDA001B3AE9 /* FiveRecordView[五档] */,
+				3400C56A20776FDA001B3AE9 /* MaskView[遮罩] */,
+				3400C56D20776FDA001B3AE9 /* TimeLineView[分时图] */,
+				3400C57020776FDA001B3AE9 /* VolumeView[成交量] */,
+			);
+			path = "TimeLine[分时图]";
+			sourceTree = "<group>";
+		};
+		3400C56420776FDA001B3AE9 /* FiveRecordView[五档] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C56520776FDA001B3AE9 /* YYFiveRecordTableViewCell.h */,
+				3400C56620776FDA001B3AE9 /* YYFiveRecordTableViewCell.m */,
+				3400C56720776FDA001B3AE9 /* YYFiveRecordTableViewCell.xib */,
+				3400C56820776FDA001B3AE9 /* YYFiveRecordView.h */,
+				3400C56920776FDA001B3AE9 /* YYFiveRecordView.m */,
+			);
+			path = "FiveRecordView[五档]";
+			sourceTree = "<group>";
+		};
+		3400C56A20776FDA001B3AE9 /* MaskView[遮罩] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C56B20776FDA001B3AE9 /* YYTimeLineMaskView.h */,
+				3400C56C20776FDA001B3AE9 /* YYTimeLineMaskView.m */,
+			);
+			path = "MaskView[遮罩]";
+			sourceTree = "<group>";
+		};
+		3400C56D20776FDA001B3AE9 /* TimeLineView[分时图] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C56E20776FDA001B3AE9 /* YYTimeLineView.h */,
+				3400C56F20776FDA001B3AE9 /* YYTimeLineView.m */,
+			);
+			path = "TimeLineView[分时图]";
+			sourceTree = "<group>";
+		};
+		3400C57020776FDA001B3AE9 /* VolumeView[成交量] */ = {
+			isa = PBXGroup;
+			children = (
+				3400C57120776FDA001B3AE9 /* YYTimeLineVolumeView.h */,
+				3400C57220776FDA001B3AE9 /* YYTimeLineVolumeView.m */,
+			);
+			path = "VolumeView[成交量]";
 			sourceTree = "<group>";
 		};
 		347425D1206C961100CF390E = {
@@ -363,7 +690,7 @@
 				3474260F206C96C900CF390E /* news */,
 				3400C4EB20727712001B3AE9 /* myspace */,
 				3400C4EC20727712001B3AE9 /* timeline */,
-				3400C52A2074FFD5001B3AE9 /* cache */,
+				3400C52E20776FDA001B3AE9 /* private */,
 				347425DD206C961100CF390E /* AppDelegate.h */,
 				347425DE206C961100CF390E /* AppDelegate.m */,
 				347425E3206C961100CF390E /* Main.storyboard */,
@@ -669,6 +996,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				347425EA206C961100CF390E /* LaunchScreen.storyboard in Resources */,
+				3400C58720776FDA001B3AE9 /* YYFiveRecordTableViewCell.xib in Resources */,
 				347425E7206C961100CF390E /* Assets.xcassets in Resources */,
 				3400C5272074B9AF001B3AE9 /* TKImages.xcassets in Resources */,
 				347425E5206C961100CF390E /* Main.storyboard in Resources */,
@@ -756,21 +1084,35 @@
 				3400C4FB20728318001B3AE9 /* TKTimeLineNewsSource.m in Sources */,
 				3400C4DE2071F5DF001B3AE9 /* TKMarketsDetailMarketCell.m in Sources */,
 				34B88C9D206D35CD007DE454 /* QYPPCollectionView.m in Sources */,
+				3400C58220776FDA001B3AE9 /* YYKlineMaskView.m in Sources */,
+				3400C57A20776FDA001B3AE9 /* UIColor+YYStockTheme.m in Sources */,
+				3400C58420776FDA001B3AE9 /* YYStockViewMaskView.m in Sources */,
+				3400C58520776FDA001B3AE9 /* YYStockScrollView.m in Sources */,
+				3400C58A20776FDA001B3AE9 /* YYTimeLineView.m in Sources */,
 				3400C4CC20714C3A001B3AE9 /* TKMarketsListController.m in Sources */,
+				3400C58920776FDA001B3AE9 /* YYTimeLineMaskView.m in Sources */,
 				3400C5162073DEE0001B3AE9 /* TKMySpaceShareController.m in Sources */,
 				3400C4DB2071F2F2001B3AE9 /* TKMarketsDetailMarketListSource.m in Sources */,
+				3400C58120776FDA001B3AE9 /* YYKlineView.m in Sources */,
 				34B88C8C206D35CD007DE454 /* TKModel.m in Sources */,
+				3400C58E20776FDA001B3AE9 /* YYStock.m in Sources */,
+				3400C57B20776FDA001B3AE9 /* YYStockVariable.m in Sources */,
 				34B88D07206E85E2007DE454 /* QYPPTabBar.m in Sources */,
+				3400C58B20776FDA001B3AE9 /* YYTimeLineVolumeView.m in Sources */,
 				34B88CA2206D35CD007DE454 /* QYPPTableViewSource.m in Sources */,
+				3400C57C20776FDA001B3AE9 /* YYTopBarView.m in Sources */,
 				34B88CF9206E496B007DE454 /* TKNewsSource.m in Sources */,
 				3400C4CB20714C3A001B3AE9 /* TKMarketsCell.m in Sources */,
+				3400C57F20776FDA001B3AE9 /* YYKline.m in Sources */,
 				3400C5202073DFD4001B3AE9 /* TKLoginController.m in Sources */,
 				34B88D0F206E921C007DE454 /* TKBaseAPI.m in Sources */,
 				34B88CF8206E496B007DE454 /* TKNewsModel.m in Sources */,
 				3400C4CD20714C3A001B3AE9 /* TKMarketsModel.m in Sources */,
 				34742616206C972700CF390E /* TKNewsMainController.m in Sources */,
+				3400C58320776FDA001B3AE9 /* YYKlineVolumeView.m in Sources */,
 				34B88C9E206D35CD007DE454 /* QYPPCollectionViewSource.m in Sources */,
 				3400C50120728799001B3AE9 /* TKTimeLineNewsCell.m in Sources */,
+				3400C57D20776FDA001B3AE9 /* YYLinePositionModel.m in Sources */,
 				3400C5122073DCEB001B3AE9 /* TKMySpaceSource.m in Sources */,
 				3400C4D520714CD7001B3AE9 /* TKMarketsDetailListController.m in Sources */,
 				3400C4FE2072834B001B3AE9 /* TKTimeLineNewsModel.m in Sources */,
@@ -786,14 +1128,20 @@
 				3400C4E820720669001B3AE9 /* QYPPAlertView_.m in Sources */,
 				34B88C9F206D35CD007DE454 /* QYPPListViewController.m in Sources */,
 				34B88D08206E85E2007DE454 /* QYPPTabBarController.m in Sources */,
+				3400C58620776FDA001B3AE9 /* YYFiveRecordTableViewCell.m in Sources */,
 				3400C4D120714C6D001B3AE9 /* TKMarketsDetailController.m in Sources */,
 				3400C4E12071FEC6001B3AE9 /* TKMarketsDetailExchangeListSource.m in Sources */,
 				3400C4D820714F9A001B3AE9 /* TKMarketsTabSource.m in Sources */,
 				34742613206C970800CF390E /* TKMarketsMainController.m in Sources */,
-				3400C52D2074FFE8001B3AE9 /* TKCache.m in Sources */,
+				3400C57920776FDA001B3AE9 /* TKCache.m in Sources */,
 				3400C4CE20714C3A001B3AE9 /* TKMarketsSource.m in Sources */,
+				3400C58D20776FDA001B3AE9 /* YYStockView_TimeLine.m in Sources */,
+				3400C57E20776FDA001B3AE9 /* YYVolumePositionModel.m in Sources */,
 				34B88D06206E85E2007DE454 /* QYPPBarItem.m in Sources */,
+				3400C58C20776FDA001B3AE9 /* YYStockView_Kline.m in Sources */,
+				3400C58020776FDA001B3AE9 /* MAline.m in Sources */,
 				34B88CF7206E496B007DE454 /* TKNewsCell.m in Sources */,
+				3400C58820776FDA001B3AE9 /* YYFiveRecordView.m in Sources */,
 				3400C5192073DF15001B3AE9 /* TKMySpaceAboutController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
