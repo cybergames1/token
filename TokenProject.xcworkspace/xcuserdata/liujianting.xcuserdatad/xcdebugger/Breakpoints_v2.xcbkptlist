@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TokenProject/AppDelegate.m"
-            timestampString = "544698627.199091"
+            filePath = "TokenProject/markets/kline/TKMarketTrendConfigSource.m"
+            timestampString = "544723327.56431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
-            landmarkName = "-setNavigationBarStyle"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "-requestConfigURL:success:failure:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

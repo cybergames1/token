@@ -48,7 +48,7 @@
 }
 
 - (void)initUI {
-    [self initUI_TopBarView];
+   // [self initUI_TopBarView];
     [self initUI_StockContainerView];
 }
 
@@ -69,7 +69,7 @@
         [self.mainView addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.left.right.equalTo(self.mainView);
-            make.top.equalTo(self.topBarView.mas_bottom).offset(YYStockViewGap);
+            make.top.equalTo(self.mainView.mas_top).offset(YYStockViewGap);
         }];
         view;
     });

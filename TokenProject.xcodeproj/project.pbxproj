@@ -54,6 +54,10 @@
 		3400C58C20776FDA001B3AE9 /* YYStockView_Kline.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C57420776FDA001B3AE9 /* YYStockView_Kline.m */; };
 		3400C58D20776FDA001B3AE9 /* YYStockView_TimeLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C57620776FDA001B3AE9 /* YYStockView_TimeLine.m */; };
 		3400C58E20776FDA001B3AE9 /* YYStock.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C57820776FDA001B3AE9 /* YYStock.m */; };
+		3400C5922077C02F001B3AE9 /* TKMarketsTimeLineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C5912077C02F001B3AE9 /* TKMarketsTimeLineModel.m */; };
+		3400C5952077C118001B3AE9 /* TKMarketTrendConfigSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C5942077C118001B3AE9 /* TKMarketTrendConfigSource.m */; };
+		3400C5982077C225001B3AE9 /* TKMarketsTimeLineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C5972077C225001B3AE9 /* TKMarketsTimeLineController.m */; };
+		3400C59B2077C413001B3AE9 /* TKMarketsTimeLineSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3400C59A2077C413001B3AE9 /* TKMarketsTimeLineSource.m */; };
 		347425DF206C961100CF390E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 347425DE206C961100CF390E /* AppDelegate.m */; };
 		347425E5206C961100CF390E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 347425E3206C961100CF390E /* Main.storyboard */; };
 		347425E7206C961100CF390E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 347425E6206C961100CF390E /* Assets.xcassets */; };
@@ -195,6 +199,14 @@
 		3400C57620776FDA001B3AE9 /* YYStockView_TimeLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYStockView_TimeLine.m; sourceTree = "<group>"; };
 		3400C57720776FDA001B3AE9 /* YYStock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYStock.h; sourceTree = "<group>"; };
 		3400C57820776FDA001B3AE9 /* YYStock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYStock.m; sourceTree = "<group>"; };
+		3400C5902077C02F001B3AE9 /* TKMarketsTimeLineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMarketsTimeLineModel.h; sourceTree = "<group>"; };
+		3400C5912077C02F001B3AE9 /* TKMarketsTimeLineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMarketsTimeLineModel.m; sourceTree = "<group>"; };
+		3400C5932077C118001B3AE9 /* TKMarketTrendConfigSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMarketTrendConfigSource.h; sourceTree = "<group>"; };
+		3400C5942077C118001B3AE9 /* TKMarketTrendConfigSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMarketTrendConfigSource.m; sourceTree = "<group>"; };
+		3400C5962077C225001B3AE9 /* TKMarketsTimeLineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMarketsTimeLineController.h; sourceTree = "<group>"; };
+		3400C5972077C225001B3AE9 /* TKMarketsTimeLineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMarketsTimeLineController.m; sourceTree = "<group>"; };
+		3400C5992077C413001B3AE9 /* TKMarketsTimeLineSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TKMarketsTimeLineSource.h; sourceTree = "<group>"; };
+		3400C59A2077C413001B3AE9 /* TKMarketsTimeLineSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TKMarketsTimeLineSource.m; sourceTree = "<group>"; };
 		347425DA206C961100CF390E /* TokenProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokenProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		347425DD206C961100CF390E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		347425DE206C961100CF390E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -660,6 +672,21 @@
 			path = "VolumeView[成交量]";
 			sourceTree = "<group>";
 		};
+		3400C58F2077C005001B3AE9 /* kline */ = {
+			isa = PBXGroup;
+			children = (
+				3400C5902077C02F001B3AE9 /* TKMarketsTimeLineModel.h */,
+				3400C5912077C02F001B3AE9 /* TKMarketsTimeLineModel.m */,
+				3400C5932077C118001B3AE9 /* TKMarketTrendConfigSource.h */,
+				3400C5942077C118001B3AE9 /* TKMarketTrendConfigSource.m */,
+				3400C5962077C225001B3AE9 /* TKMarketsTimeLineController.h */,
+				3400C5972077C225001B3AE9 /* TKMarketsTimeLineController.m */,
+				3400C5992077C413001B3AE9 /* TKMarketsTimeLineSource.h */,
+				3400C59A2077C413001B3AE9 /* TKMarketsTimeLineSource.m */,
+			);
+			path = kline;
+			sourceTree = "<group>";
+		};
 		347425D1206C961100CF390E = {
 			isa = PBXGroup;
 			children = (
@@ -737,6 +764,7 @@
 		34742610206C96C900CF390E /* markets */ = {
 			isa = PBXGroup;
 			children = (
+				3400C58F2077C005001B3AE9 /* kline */,
 				3400C4D220714C9E001B3AE9 /* detail */,
 				3400C4C220714C3A001B3AE9 /* main */,
 				34742611206C970800CF390E /* TKMarketsMainController.h */,
@@ -1079,6 +1107,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34B88CA1206D35CD007DE454 /* QYPPTableView.m in Sources */,
+				3400C5952077C118001B3AE9 /* TKMarketTrendConfigSource.m in Sources */,
 				34B88D0C206E8FB4007DE454 /* NSString+TK.m in Sources */,
 				34B88CFC206E4992007DE454 /* TKNewsDetailController.m in Sources */,
 				3400C4FB20728318001B3AE9 /* TKTimeLineNewsSource.m in Sources */,
@@ -1089,6 +1118,7 @@
 				3400C58420776FDA001B3AE9 /* YYStockViewMaskView.m in Sources */,
 				3400C58520776FDA001B3AE9 /* YYStockScrollView.m in Sources */,
 				3400C58A20776FDA001B3AE9 /* YYTimeLineView.m in Sources */,
+				3400C5922077C02F001B3AE9 /* TKMarketsTimeLineModel.m in Sources */,
 				3400C4CC20714C3A001B3AE9 /* TKMarketsListController.m in Sources */,
 				3400C58920776FDA001B3AE9 /* YYTimeLineMaskView.m in Sources */,
 				3400C5162073DEE0001B3AE9 /* TKMySpaceShareController.m in Sources */,
@@ -1117,6 +1147,7 @@
 				3400C4D520714CD7001B3AE9 /* TKMarketsDetailListController.m in Sources */,
 				3400C4FE2072834B001B3AE9 /* TKTimeLineNewsModel.m in Sources */,
 				3400C5112073DCEB001B3AE9 /* TKMySpaceModel.m in Sources */,
+				3400C5982077C225001B3AE9 /* TKMarketsTimeLineController.m in Sources */,
 				34B88C9C206D35CD007DE454 /* TKRequest.m in Sources */,
 				34B88CA0206D35CD007DE454 /* QYPPListViewSource.m in Sources */,
 				347425ED206C961100CF390E /* main.m in Sources */,
@@ -1127,6 +1158,7 @@
 				3400C4C020700405001B3AE9 /* UIView+QYPPSizes.m in Sources */,
 				3400C4E820720669001B3AE9 /* QYPPAlertView_.m in Sources */,
 				34B88C9F206D35CD007DE454 /* QYPPListViewController.m in Sources */,
+				3400C59B2077C413001B3AE9 /* TKMarketsTimeLineSource.m in Sources */,
 				34B88D08206E85E2007DE454 /* QYPPTabBarController.m in Sources */,
 				3400C58620776FDA001B3AE9 /* YYFiveRecordTableViewCell.m in Sources */,
 				3400C4D120714C6D001B3AE9 /* TKMarketsDetailController.m in Sources */,

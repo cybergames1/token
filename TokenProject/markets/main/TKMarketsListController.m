@@ -11,6 +11,8 @@
 #import "TKMarketsModel.h"
 #import "TKMarketsDetailController.h"
 
+#import "TKMarketsTimeLineController.h"
+
 @interface TKMarketsListController ()
 
 @property (nonatomic, strong) NSTimer * refreshPriceTimer;
@@ -57,6 +59,12 @@
     controller.currencyId = item.currency_id;
     controller.currencyName = item.currency;
     [self.navigationController pushViewController:controller animated:YES];
+    
+//    TKMarketsTimeLineController *controller = [[TKMarketsTimeLineController alloc] init];
+//    controller.hidesBottomBarWhenPushed = YES;
+//    controller.marketId = item.market_id;
+//    controller.pairId = item.com_id;
+//    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)p_starTimer
