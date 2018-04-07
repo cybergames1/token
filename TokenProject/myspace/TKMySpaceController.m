@@ -32,6 +32,16 @@
     [self startRefresh];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:2];
+    TKMySpaceModel *clearcache = [self itemDataForIndexPath:indexPath];
+    clearcache.detail = [TKBaseAPI fileSizeWithInteger:[[TKCache sharedCache] cacheSize]];
+    [self reloadCellAtIndexPath:indexPath withData:clearcache];
+}
+
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 22)];
@@ -50,8 +60,14 @@
         [self presentViewController:nav animated:YES completion:nil];
     }else if (indexPath.section == 1 && indexPath.row == 0) {
         //推荐APP
+        TKMySpaceShareController *controller = [TKMySpaceShareController new];
+        controller.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.section == 1&& indexPath.row == 1) {
         //关于
+        TKMySpaceAboutController *controller = [TKMySpaceAboutController new];
+        controller.hidesBottomBarWhenPushed = YES;
+        [self.navigationController pushViewController:controller animated:YES];
     }else if (indexPath.section == 2 && indexPath.row == 0) {
         //清除缓存
         @weakify(self);

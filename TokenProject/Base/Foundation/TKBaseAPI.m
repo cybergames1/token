@@ -11,6 +11,30 @@
 
 @implementation TKBaseAPI
 
++ (CGFloat)statusBarAndNavgationBarHeight:(UINavigationController *)navgationController
+{
+    return [self statusBarHeight] + [self navgationBarHeight:navgationController];
+}
+
++ (CGFloat)statusBarHeight
+{
+    return [[UIApplication sharedApplication] statusBarFrame].size.height;
+}
+
++ (CGFloat)navgationBarHeight:(UINavigationController *)navgationController
+{
+    if (!navgationController || ![navgationController isKindOfClass:[UINavigationController class]]) return 0.0;
+    
+    return navgationController.navigationBar.height;
+}
+
++ (CGFloat)tabBarHeight:(UIViewController *)viewController
+{
+    if (!viewController || ![viewController isKindOfClass:[UIViewController class]]) return 0.0;
+    
+    return viewController.tabBarController.tabBar.height;
+}
+
 /**
  * 字符串md5加密
  */
@@ -53,13 +77,13 @@
     if (size < 1024) {// 小于1k
         return [NSString stringWithFormat:@"%ldB",(long)size];
     }else if (size < 1024 * 1024){// 小于1m
-        CGFloat aFloat = size/1024;
+        CGFloat aFloat = (size*1.0)/(1024*1.0);
         return [NSString stringWithFormat:@"%.0fK",aFloat];
     }else if (size < 1024 * 1024 * 1024){// 小于1G
-        CGFloat aFloat = size/(1024 * 1024);
+        CGFloat aFloat = (size*1.0)/(1024*1024*1.0);
         return [NSString stringWithFormat:@"%.1fM",aFloat];
     }else{
-        CGFloat aFloat = size/(1024*1024*1024);
+        CGFloat aFloat = (size*1.0)/(1024*1024*1024*1.0);
         return [NSString stringWithFormat:@"%.1fG",aFloat];
     }
 }

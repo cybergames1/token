@@ -88,13 +88,19 @@
 - (void)setNavigationBarStyle
 {
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
+    
     CGFloat version = [[[UIDevice currentDevice] systemVersion] floatValue];
     if (version >= 11.0) {
         [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(-200, 0)
                                                              forBarMetrics:UIBarMetricsDefault];
+        UIImage *backButtonImage = [[UIImage imageNamed:@"nav_back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        [UINavigationBar appearance].backIndicatorImage = backButtonImage;
+        [UINavigationBar appearance].backIndicatorTransitionMaskImage =backButtonImage;
     }else {
         [[UIBarButtonItem appearance] setBackButtonTitlePositionAdjustment:UIOffsetMake(0, -60)
                                                              forBarMetrics:UIBarMetricsDefault];
+        UIImage *image = [[UIImage imageNamed:@"nav_back"] imageWithRenderingMode:(UIImageRenderingModeAlwaysOriginal)];
+        [[UIBarButtonItem appearance] setBackButtonBackgroundImage:[image resizableImageWithCapInsets:UIEdgeInsetsMake(0, image.size.width, 0, 0)] forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     }
 }
 

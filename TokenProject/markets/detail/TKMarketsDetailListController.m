@@ -43,10 +43,11 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColorFromRGB(0xeeeeee);
     
+    CGFloat height = [TKBaseAPI statusBarAndNavgationBarHeight:self.navigationController];
     NSString *cellClassName = (self.tabType == 1) ? @"TKMarketsDetailMarketCell" : @"TKMarketsDetailExchangeCell";
     NSString *sourceClassName = (self.tabType == 1) ? @"TKMarketsDetailMarketListSource" : @"TKMarketsDetailExchangeListSource";
     [self registerCell:cellClassName tableViewSource:sourceClassName reuseIdentifier:cellClassName];
-    self.tableView.height -= 64+44;
+    self.tableView.height -= height+44;
     
     TKMarketsDetailMarketListSource *source = (TKMarketsDetailMarketListSource *)self.tableViewSource;
     source.currencyId = self.currencyId;

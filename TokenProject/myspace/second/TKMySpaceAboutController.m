@@ -17,21 +17,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view.backgroundColor = UIColorFromRGB(0xeeeeee);
+    self.title = @"关于我们";
+    [self setupView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setupView
+{
+    CGFloat top = [TKBaseAPI statusBarAndNavgationBarHeight:self.navigationController];
+    UIImageView *icon = [[UIImageView alloc] initWithFrame:CGRectMake(0, 54+top, 76, 76)];
+    icon.centerX = self.view.centerX;
+    icon.image = [UIImage imageNamed:@"logo_about"];
+    
+    UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, icon.bottom+12, self.view.width, 18)];
+    title.font = [UIFont boldSystemFontOfSize:18];
+    title.textAlignment = NSTextAlignmentCenter;
+    title.text = @"TokenTime";
+    
+    UILabel *info = [[UILabel alloc] initWithFrame:CGRectMake(0, title.bottom+42, self.view.width, 18)];
+    info.font = [UIFont systemFontOfSize:18];
+    info.textAlignment = NSTextAlignmentCenter;
+    info.text = @"合作联系：admin@tokentimer.io";
+    
+    [self.view addSubview:icon];
+    [self.view addSubview:title];
+    [self.view addSubview:info];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

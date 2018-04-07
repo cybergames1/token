@@ -64,12 +64,13 @@
 //通过服务器返回的tab列表，加载tabBar
 - (void)loadTabBarControllerWithData:(id)responseObject
 {
+    CGFloat top = [TKBaseAPI statusBarAndNavgationBarHeight:self.navigationController];
     TKMarketsModel *markesModel = (TKMarketsModel *)responseObject;
     QYPPTabBarController *tabBarController = [[QYPPTabBarController alloc] init];
     tabBarController.viewControllers = [self subViewControllersForTabs:markesModel.data.list];
     [self addChildViewController:tabBarController];
     [tabBarController didMoveToParentViewController:self];
-    tabBarController.view.frame = CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height);
+    tabBarController.view.frame = CGRectMake(0,top, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:tabBarController.view];
     [tabBarController beginAppearanceTransition:YES animated:NO];
     [tabBarController endAppearanceTransition];

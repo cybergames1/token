@@ -11,6 +11,11 @@
 
 @interface TKBaseAPI : NSObject
 
++ (CGFloat)statusBarAndNavgationBarHeight:(UINavigationController *)navgationController;
++ (CGFloat)statusBarHeight;
++ (CGFloat)navgationBarHeight:(UINavigationController *)navgationController;
++ (CGFloat)tabBarHeight:(UIViewController *)viewController;
+
 /**
  * 字符串md5加密
  */

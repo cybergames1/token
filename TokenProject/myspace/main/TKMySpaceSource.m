@@ -41,11 +41,11 @@
     NSArray *section1 = @[login];
     
     TKMySpaceModel *share = [TKMySpaceModel new];
-    share.title = @"推荐 TokenTimer";
+    share.title = @"推荐我们";
     share.viewModel = vm1;
     
     TKMySpaceModel *about = [TKMySpaceModel new];
-    about.title = @"关于 TokenTimer";
+    about.title = @"关于我们";
     about.viewModel = vm1;
     
     NSArray *section2 = @[share,about];

@@ -39,7 +39,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
         self.backgroundColor = [UIColor clearColor];
         
         //磨玻璃view
-        UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:self.bounds];
+        UIView *toolbar = [[UIView alloc] initWithFrame:self.bounds];
+        toolbar.backgroundColor = [UIColor whiteColor];
         [self addSubview:toolbar];
         
         CGFloat one_pixel = 1.0 / [UIScreen mainScreen].scale;

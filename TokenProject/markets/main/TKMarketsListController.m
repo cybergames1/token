@@ -26,9 +26,11 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = UIColorFromRGB(0xeeeeee);
     
+    CGFloat height = [TKBaseAPI statusBarAndNavgationBarHeight:self.navigationController];
+    CGFloat tabbar_h = [TKBaseAPI tabBarHeight:self];
     [self registerCell:@"TKMarketsCell" tableViewSource:@"TKMarketsSource" reuseIdentifier:@"TKMarketsCell"];
-    self.tableView.height -= 64+44;
-    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 50, 0);
+    self.tableView.height -= height+44;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, tabbar_h, 0);
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     
     TKMarketsSource *source = (TKMarketsSource *)self.tableViewSource;

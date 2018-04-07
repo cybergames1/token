@@ -27,7 +27,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.title = @"登录";
     [self setupNavgationBar];
     [self setupView];
@@ -54,7 +53,8 @@
 
 - (void)setupView
 {
-    UILabel *titleLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(0, 55, self.view.width, 13)];
+    CGFloat top = [TKBaseAPI statusBarAndNavgationBarHeight:self.navigationController];
+    UILabel *titleLabel_ = [[UILabel alloc] initWithFrame:CGRectMake(0, 55+top, self.view.width, 13)];
     titleLabel_.textColor = UIColorFromRGB(0x666666);
     titleLabel_.font = [UIFont systemFontOfSize:12];
     titleLabel_.textAlignment = NSTextAlignmentCenter;

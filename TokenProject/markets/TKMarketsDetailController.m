@@ -27,11 +27,12 @@
 
 - (void)loadTabBarController
 {
+    CGFloat top = [TKBaseAPI statusBarAndNavgationBarHeight:self.navigationController];
     QYPPTabBarController *tabBarController = [[QYPPTabBarController alloc] init];
     tabBarController.viewControllers = [self subViewControllers];
     [self addChildViewController:tabBarController];
     [tabBarController didMoveToParentViewController:self];
-    tabBarController.view.frame = CGRectMake(0, 64, self.view.bounds.size.width, self.view.bounds.size.height);
+    tabBarController.view.frame = CGRectMake(0, top, self.view.bounds.size.width, self.view.bounds.size.height);
     [self.view addSubview:tabBarController.view];
     tabBarController.view.backgroundColor = [UIColor whiteColor];
     [tabBarController beginAppearanceTransition:YES animated:NO];
