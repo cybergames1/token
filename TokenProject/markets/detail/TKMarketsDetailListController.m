@@ -58,7 +58,7 @@
 - (void)urlActionAtCell:(TKMarketsDetailExchangeCell *)cell
 {
     TKMarketsFeedModel *item = [self itemDataForIndexPath:cell.indexPath];
-    QYPPAlertView_ *alertView = [[QYPPAlertView_ alloc] initWithTitle:item.market_name message:item.website delegate:self buttonTitles:@"用 Safari 打开",@"取消",nil];
+    QYPPAlertView_ *alertView = [[QYPPAlertView_ alloc] initWithTitle:item.market_name message:item.website delegate:self buttonTitles:@"Safari打开",@"取消",nil];
     alertView.md_indexPath = cell.indexPath;
     [alertView show];
 }
@@ -67,7 +67,12 @@
 {
     TKMarketsFeedModel *item = [self itemDataForIndexPath:alertView.md_indexPath];
     if (buttonIndex == 0) {
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:item.website] options:@{} completionHandler:nil];
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:item.website] options:@{} completionHandler:nil];
+        } else {
+            // Fallback on earlier versions
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:item.website]];
+        }
     }
 }
 

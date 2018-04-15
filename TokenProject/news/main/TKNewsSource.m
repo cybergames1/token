@@ -33,28 +33,28 @@
 {
     NSString *topId = [[NSUserDefaults standardUserDefaults] objectForKey:@"News_top_id"];
     
-    NSDictionary *parameters = @{@"catelogue_key" : @"www",
-                                 @"limit" : @20,
-                                 @"flag" : @"up",
+    NSDictionary *parameters = @{@"flag" : @"up",
                                  @"information_id" : topId ?: @"0",
                                  };
+    NSMutableDictionary *allparameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
+    [allparameters addEntriesFromDictionary:[TKTools baseParameters]];
     
     TKRequest *request = self.request;
     request.isLoadMore = NO;
-    [request GET:@"http://api.jinse.com/v3/information/list" parameters:parameters];
+    [request GET:@"http://118.89.151.44/API/information.php" parameters:allparameters];
 }
 
 - (void)loadMoreDataSource
 {
-    NSDictionary *parameters = @{@"catelogue_key" : @"www",
-                                 @"limit" : @20,
-                                 @"flag" : @"down",
+    NSDictionary *parameters = @{@"flag" : @"down",
                                  @"information_id" : self.bottomId ?: @"0",
                                  };
+    NSMutableDictionary *allparameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
+    [allparameters addEntriesFromDictionary:[TKTools baseParameters]];
     
     TKRequest *request = self.request;
     request.isLoadMore = YES;
-    [request GET:@"http://api.jinse.com/v3/information/list" parameters:parameters];
+    [request GET:@"http://118.89.151.44/API/information.php" parameters:allparameters];
 }
 
 - (NSArray *)parserData:(id)data

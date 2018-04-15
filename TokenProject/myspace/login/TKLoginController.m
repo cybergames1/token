@@ -7,6 +7,8 @@
 //
 
 #import "TKLoginController.h"
+#import "TKRegistSource.h"
+#import "TKUser.h"
 
 @interface TKLoginController ()
 {
@@ -99,6 +101,7 @@
     [loginButton_ setTitle:@"登录" forState:UIControlStateNormal];
     [loginButton_.layer setCornerRadius:4];
     [loginButton_.layer setMasksToBounds:YES];
+    [loginButton_ addTarget:self action:@selector(p_login) forControlEvents:UIControlEventTouchUpInside];
     self.loginButton = loginButton_;
     [self p_setLoginButtonEnable:NO];
     
@@ -132,6 +135,43 @@
     [self p_setCodeTimerIsActing:YES];
     if (self.codeTimer) [self.codeTimer invalidate];
     self.codeTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(p_getCodeTimerAction) userInfo:nil repeats:YES];
+    
+    TKRegistSource *source = [[TKRegistSource alloc] init];
+    source.mobile = _phoneTextField.text;
+    [source requestURL:@"http://118.89.151.44/API/regist.php" success:^(NSURLSessionDataTask *task, id responseObject) {
+        //
+        NSLog(@"url:%@",task.currentRequest.URL);
+        if (!responseObject || ![responseObject isKindOfClass:[NSDictionary class]]) return;
+
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        //
+    }];
+}
+
+//登录点击事件
+- (void)p_login
+{
+    @weakify(self);
+    TKRegistSource *source = [[TKRegistSource alloc] init];
+    source.mobile = _phoneTextField.text;
+    source.smsCode = _codeTextField.text;
+    [source requestloginURL:@"http://118.89.151.44/API/login.php" success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"url:%@",task.currentRequest.URL);
+        if (!responseObject || ![responseObject isKindOfClass:[NSDictionary class]]) return;
+        @strongify(self);
+        
+        TKUser *user = [TKUser new];
+        user.token = responseObject[@"token"];
+        user.udid = responseObject[@"udid"];
+        user.candy = [NSString stringWithFormat:@"%ld",[responseObject[@"candy"] integerValue]];
+        [[TKUserManager sharedManager] setCurrentUser:user];
+        [[TKUserManager sharedManager] save];
+        
+        if (self.loginSuccessBlock) self.loginSuccessBlock();
+        [self p_goback];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        //
+    }];
 }
 
 //计时器计时事件
@@ -158,6 +198,7 @@
     }
 }
 
+//返回按钮事件
 - (void)p_goback
 {
     [_phoneTextField resignFirstResponder];

@@ -12,6 +12,7 @@
 #import "TKMySpaceAboutController.h"
 #import "MBProgressHUD.h"
 #import "TKMySpaceModel.h"
+#import "TKUser.h"
 
 @interface TKMySpaceController ()
 
@@ -36,7 +37,8 @@
 {
     [super viewWillAppear:animated];
     
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:2];
+    TKUser *user = [[TKUserManager sharedManager] currentUser];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:((user.candy.integerValue > 0) ? 3 : 2)];
     TKMySpaceModel *clearcache = [self itemDataForIndexPath:indexPath];
     clearcache.detail = [TKBaseAPI fileSizeWithInteger:[[TKCache sharedCache] cacheSize]];
     [self reloadCellAtIndexPath:indexPath withData:clearcache];
@@ -52,23 +54,29 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    TKUser *user = [[TKUserManager sharedManager] currentUser];
     
     if (indexPath.section == 0 && indexPath.row == 0) {
         //登录
+        @weakify(self);
         TKLoginController *controller = [TKLoginController new];
+        controller.loginSuccessBlock = ^{
+            @strongify(self);
+            [self.tableViewSource freshDataSource];
+        };
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:controller];
         [self presentViewController:nav animated:YES completion:nil];
-    }else if (indexPath.section == 1 && indexPath.row == 0) {
+    }else if (indexPath.section == ((user.candy.integerValue > 0) ? 2 : 1) && indexPath.row == 0) {
         //推荐APP
         TKMySpaceShareController *controller = [TKMySpaceShareController new];
         controller.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:controller animated:YES];
-    }else if (indexPath.section == 1&& indexPath.row == 1) {
+    }else if (indexPath.section == ((user.candy.integerValue > 0) ? 2 : 1) && indexPath.row == 1) {
         //关于
         TKMySpaceAboutController *controller = [TKMySpaceAboutController new];
         controller.hidesBottomBarWhenPushed = YES;
         [self.navigationController pushViewController:controller animated:YES];
-    }else if (indexPath.section == 2 && indexPath.row == 0) {
+    }else if (indexPath.section == ((user.candy.integerValue > 0) ? 3 : 2) && indexPath.row == 0) {
         //清除缓存
         @weakify(self);
         [[TKCache sharedCache] clearAllCacheCompletion:^{

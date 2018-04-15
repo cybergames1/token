@@ -129,32 +129,15 @@
 
 - (void)requestData
 {
-    UIDevice *device = [UIDevice currentDevice];
-    NSString *model = device.model;
-    NSString *systemVersion = [NSString stringWithFormat:@"%@ %@", device.systemName, device.systemVersion];
-    NSString *deviceUUID = [[device identifierForVendor] UUIDString];
-    NSString *code = [TKBaseAPI md5:[NSString stringWithFormat:@"thalesky_eos_%lld",Current_TimeInterval]];
-    
-    NSDictionary *parameters = @{@"change_type" : @"change_utc0",
-                                 @"code" : code,
-                                 @"device_model" : model,
-                                 @"device_os" : systemVersion,
-                                 @"language" : @"zh_CN",
-                                 @"legal_currency" : @"CNY",
-                                 @"mytoken" : @"d10a54b9c85586a5af9a6218e580ec99",
-                                 @"platform" : @"ios",
-                                 @"timestamp" : @(Current_TimeInterval),
-                                 @"type" : @2,
-                                 @"udid" : deviceUUID,
-                                 @"v" : @"1.6.5",
-                                 @"group_type" : self.marketGroupType ?: @1,
+    NSDictionary *parameters = @{@"group_type" : self.marketGroupType ?: @1,
                                  @"id" : self.marketId ?: @0,
                                  @"page" : @(self.page),
-                                 @"size" : @20,
                                  };
+    NSMutableDictionary *allparameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
+    [allparameters addEntriesFromDictionary:[TKTools baseParameters]];
     
     TKRequest *request = self.request;
-    [request GET:@"http://api.lb.mytoken.org/currency/list" parameters:parameters];
+    [request GET:@"http://118.89.151.44/API/list.php" parameters:allparameters];
 }
 
 - (NSArray *)parserData:(id)data

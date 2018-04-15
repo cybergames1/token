@@ -11,8 +11,6 @@
 #import "TKMarketsModel.h"
 #import "TKMarketsDetailController.h"
 
-#import "TKMarketsTimeLineController.h"
-
 @interface TKMarketsListController ()
 
 @property (nonatomic, strong) NSTimer * refreshPriceTimer;

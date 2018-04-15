@@ -11,6 +11,11 @@
 /**
  * 登录注册页面
  */
+
+typedef void(^loginSuccessBlock)(void);
+
 @interface TKLoginController : UIViewController
+
+@property (nonatomic, copy) loginSuccessBlock loginSuccessBlock;
 
 @end

@@ -28,7 +28,7 @@
 
 - (NSString *)p_url
 {
-    return @"http://api.lb.mytoken.org/market/marketlist";
+    return @"http://118.89.151.44/API/market.php";
 }
 
 @end

@@ -43,31 +43,14 @@
 
 - (void)requestData
 {
-    UIDevice *device = [UIDevice currentDevice];
-    NSString *model = device.model;
-    NSString *systemVersion = [NSString stringWithFormat:@"%@ %@", device.systemName, device.systemVersion];
-    NSString *deviceUUID = [[device identifierForVendor] UUIDString];
-    NSString *code = [TKBaseAPI md5:[NSString stringWithFormat:@"thalesky_eos_%lld",Current_TimeInterval]];
-    
-    NSDictionary *parameters = @{@"change_type" : @"change_utc0",
-                                 @"code" : code,
-                                 @"device_model" : model,
-                                 @"device_os" : systemVersion,
-                                 @"language" : @"zh_CN",
-                                 @"legal_currency" : @"CNY",
-                                 @"mytoken" : @"d10a54b9c85586a5af9a6218e580ec99",
-                                 @"platform" : @"ios",
-                                 @"timestamp" : @(Current_TimeInterval),
-                                 @"type" : @2,
-                                 @"udid" : deviceUUID,
-                                 @"v" : @"1.6.5",
-                                 @"currency_id" : self.currencyId ?: @"",
+    NSDictionary *parameters = @{@"currency_id" : self.currencyId ?: @"",
                                  @"page" : @(self.page),
-                                 @"size" : @20,
                                  };
+    NSMutableDictionary *allparameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
+    [allparameters addEntriesFromDictionary:[TKTools baseParameters]];
     
     TKRequest *request = self.request;
-    [request GET:[self p_url] parameters:parameters];
+    [request GET:[self p_url] parameters:allparameters];
 }
 
 - (NSArray *)parserData:(id)data
@@ -100,7 +83,7 @@
 
 - (NSString *)p_url
 {
-    return @"http://api.lb.mytoken.org/ticker/currencyexchangelist";
+    return @"http://118.89.151.44/API/coinprice.php";
 }
 
 - (NSString *)p_amount:(TKMarketsFeedModel *)itemModel

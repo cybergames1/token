@@ -32,7 +32,7 @@
     
     @weakify(self);
     TKMarketsTabSource *tabSource = [TKMarketsTabSource new];
-    [tabSource requestTabURL:@"http://api.lb.mytoken.org/config/topnavigation"
+    [tabSource requestTabURL:@"http://118.89.151.44/API/mt_top.php"
                      success:^(NSURLSessionDataTask *task, id responseObject)
      {
         if (!responseObject || ![responseObject isKindOfClass:[TKMarketsModel class]]) return;

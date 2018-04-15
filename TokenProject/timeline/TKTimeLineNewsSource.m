@@ -32,28 +32,28 @@
 {
     NSString *topId = [[NSUserDefaults standardUserDefaults] objectForKey:@"TimeLineNews_top_id"];
     
-    NSDictionary *parameters = @{@"limit" : @20,
-                                 @"flag" : @"up",
+    NSDictionary *parameters = @{@"flag" : @"up",
                                  @"id" : topId ?: @"0",
-                                 @"version" : @"2.5.0",
                                  };
+    NSMutableDictionary *allparameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
+    [allparameters addEntriesFromDictionary:[TKTools baseParameters]];
     
     TKRequest *request = self.request;
     request.isLoadMore = NO;
-    [request GET:@"http://api.jinse.com/v3/live/list" parameters:parameters];
+    [request GET:@"http://118.89.151.44/API/kuaixun.php" parameters:allparameters];
 }
 
 - (void)loadMoreDataSource
 {
-    NSDictionary *parameters = @{@"limit" : @20,
-                                 @"flag" : @"down",
+    NSDictionary *parameters = @{@"flag" : @"down",
                                  @"id" : self.bottomId ?: @"0",
-                                 @"version" : @"2.5.0",
                                  };
+    NSMutableDictionary *allparameters = [NSMutableDictionary dictionaryWithDictionary:parameters];
+    [allparameters addEntriesFromDictionary:[TKTools baseParameters]];
     
     TKRequest *request = self.request;
     request.isLoadMore = YES;
-    [request GET:@"http://api.jinse.com/v3/live/list" parameters:parameters];
+    [request GET:@"http://118.89.151.44/API/kuaixun.php" parameters:allparameters];
 }
 
 - (NSArray *)parserData:(id)data

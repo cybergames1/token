@@ -8,6 +8,7 @@
 
 #import "TKMySpaceSource.h"
 #import "TKMySpaceModel.h"
+#import "TKUser.h"
 
 @interface TKMySpaceSource ()
 
@@ -28,6 +29,10 @@
 
 - (void)freshDataSource
 {
+    [_listArray removeAllObjects];
+    
+    TKUser *user = [[TKUserManager sharedManager] currentUser];
+    
     TKMySpaceViewModel *vm2 = [TKMySpaceViewModel new];
     vm2.cellHeight = 87;
     
@@ -35,7 +40,7 @@
     vm1.cellHeight = 55;
     
     TKMySpaceModel *login = [TKMySpaceModel new];
-    login.title = @"登录";
+    login.title = user.udid ? user.udid : @"登录";
     login.viewModel = vm2;
     
     NSArray *section1 = @[login];
@@ -61,11 +66,26 @@
     [_listArray addObject:section2];
     [_listArray addObject:section3];
     
-    self.sectionCount = 3;
-    
-    [self updateData:section1 atSection:0];
-    [self updateData:section2 atSection:1];
-    [self updateData:section3 atSection:2];
+    if (user.candy > 0) {
+        TKMySpaceModel *candy= [TKMySpaceModel new];
+        candy.title = @"我的糖果";
+        candy.detail = (user.candy.integerValue > 0) ? user.candy : @"";
+        candy.viewModel = vm1;
+        NSArray *candySection = @[candy];
+        
+        [_listArray insertObject:candySection atIndex:1];
+        
+        self.sectionCount = 4;
+        [self updateData:section1 atSection:0];
+        [self updateData:candySection atSection:1];
+        [self updateData:section2 atSection:2];
+        [self updateData:section3 atSection:3];
+    }else {
+        self.sectionCount = 3;
+        [self updateData:section1 atSection:0];
+        [self updateData:section2 atSection:1];
+        [self updateData:section3 atSection:2];
+    }
     
     if (self.delegate && [self.delegate respondsToSelector:@selector(listViewSourceDidFinish:)]) {
         [self.delegate listViewSourceDidFinish:self];
